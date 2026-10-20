@@ -1,0 +1,144 @@
+{
+  "classes": [
+    "ceiling",
+    "chair",
+    "counter",
+    "floor",
+    "lamp",
+    "plant",
+    "screen",
+    "shelf",
+    "sink",
+    "sofa",
+    "stove",
+    "table",
+    "wall"
+  ],
+  "instances": {
+    "1": {
+      "class": "floor",
+      "actor": "Floor_01",
+      "mesh": "Cube"
+    },
+    "2": {
+      "class": "ceiling",
+      "actor": "Ceiling_01",
+      "mesh": "Cube"
+    },
+    "3": {
+      "class": "wall",
+      "actor": "Wall_N_01",
+      "mesh": "Cube"
+    },
+    "4": {
+      "class": "wall",
+      "actor": "Wall_W_01",
+      "mesh": "Cube"
+    },
+    "5": {
+      "class": "wall",
+      "actor": "Wall_S_Left",
+      "mesh": "Cube"
+    },
+    "6": {
+      "class": "wall",
+      "actor": "Wall_S_Right",
+      "mesh": "Cube"
+    },
+    "7": {
+      "class": "wall",
+      "actor": "Wall_S_Lintel",
+      "mesh": "Cube"
+    },
+    "8": {
+      "class": "wall",
+      "actor": "Wall_E_Front",
+      "mesh": "Cube"
+    },
+    "9": {
+      "class": "wall",
+      "actor": "Wall_E_Back",
+      "mesh": "Cube"
+    },
+    "10": {
+      "class": "wall",
+      "actor": "Wall_E_Below",
+      "mesh": "Cube"
+    },
+    "11": {
+      "class": "wall",
+      "actor": "Wall_E_Above",
+      "mesh": "Cube"
+    },
+    "12": {
+      "class": "wall",
+      "actor": "Wall_Internal_01",
+      "mesh": "Cube"
+    },
+    "13": {
+      "class": "sofa",
+      "actor": "SM_Sofa_01",
+      "mesh": "Cube"
+    },
+    "14": {
+      "class": "table",
+      "actor": "SM_CoffeeTable_01",
+      "mesh": "Cube"
+    },
+    "15": {
+      "class": "shelf",
+      "actor": "SM_Shelf_01",
+      "mesh": "Cube"
+    },
+    "16": {
+      "class": "screen",
+      "actor": "SM_TV_01",
+      "mesh": "Cube"
+    },
+    "17": {
+      "class": "lamp",
+      "actor": "SM_Lamp_01",
+      "mesh": "Cylinder"
+    },
+    "18": {
+      "class": "plant",
+      "actor": "SM_Plant_01",
+      "mesh": "Cone"
+    },
+    "19": {
+      "class": "plant",
+      "actor": "SM_Plant_02",
+      "mesh": "Cone"
+    },
+    "20": {
+      "class": "table",
+      "actor": "SM_Table_01",
+      "mesh": "Cube"
+    },
+    "21": {
+      "class": "chair",
+      "actor": "SM_Chair_01",
+      "mesh": "Cube"
+    },
+    "22": {
+      "class": "chair",
+      "actor": "SM_Chair_02",
+      "mesh": "Cube"
+    },
+    "23": {
+      "class": "counter",
+      "actor": "SM_Counter_01",
+      "mesh": "Cube"
+    },
+    "24": {
+      "class": "stove",
+      "actor": "SM_Stove_01",
+      "mesh": "Cube"
+    },
+    "25": {
+      "class": "sink",
+      "actor": "SM_Sink_01",
+      "mesh": "Cube"
+    }
+  }
+}
