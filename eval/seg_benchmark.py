@@ -37,7 +37,8 @@ ADE_SYNONYMS = {
     "counter": ["counter", "countertop", "kitchen island", "buffet"],
     "sink": ["sink"], "stove": ["stove", "kitchen stove", "range", "oven", "microwave"],
     "tv": ["television receiver", "television", "tv", "crt screen", "screen", "monitor", "computing machine"],
-    "sign": ["signboard", "sign", "poster", "painting", "picture", "bulletin board"],
+    # not "painting"/"picture": the window view gets called "painting", which inflated sign false positives
+    "sign": ["signboard", "sign", "poster", "bulletin board"],
     "outdoor": ["sky", "tree", "building", "edifice", "road", "route", "car", "grass", "sidewalk",
                 "house", "streetlight", "street lamp", "windowpane", "window"],
 }

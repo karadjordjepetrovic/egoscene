@@ -1,0 +1,74 @@
+{
+ "model": "owlv2-base",
+ "hf_id": "google/owlv2-base-patch16-ensemble",
+ "fp16": true,
+ "device": "cuda",
+ "input_hw": [
+  960,
+  960
+ ],
+ "stride": 10,
+ "min_box": 12,
+ "score_thr": 0.1,
+ "ms_per_frame": {
+  "median": 51.254112243652344,
+  "p95": 56.93038158416748
+ },
+ "mAP50": 0.7917737186380478,
+ "AP50": {
+  "table": 0.8347591161225405,
+  "chair": 0.9598139559029887,
+  "sofa": 0.9370313713862997,
+  "shelf": 0.8781661349929695,
+  "plant": 0.9589953510580628,
+  "lamp": 0.8160909970919454,
+  "counter": 0.6607976339120007,
+  "sink": 0.2751748351030905,
+  "stove": 0.8002638837441906,
+  "tv": 0.8337986783102372,
+  "sign": 0.7546189473942001
+ },
+ "n_gt": {
+  "table": 234,
+  "chair": 268,
+  "sofa": 92,
+  "shelf": 240,
+  "plant": 295,
+  "lamp": 58,
+  "counter": 83,
+  "sink": 54,
+  "stove": 89,
+  "tv": 110,
+  "sign": 167
+ },
+ "mAP50_by_lighting": {
+  "day": 0.8026633716522465,
+  "overcast": 0.8533125799398751,
+  "evening": 0.76962649517763,
+  "night": 0.782678887762959
+ },
+ "recall_by_distance": {
+  "0-1 m": 0.5294117647058824,
+  "1-2 m": 0.7681159420289855,
+  "2-4 m": 0.8415492957746479,
+  ">4 m": 0.8108108108108109
+ },
+ "recall_by_size": {
+  "small <32\u00b2": 0.10204081632653061,
+  "medium <96\u00b2": 0.5547445255474452,
+  "large": 0.9276422764227642
+ },
+ "prompts": {
+  "table": "a table",
+  "chair": "a chair",
+  "sofa": "a sofa",
+  "shelf": "a shelf",
+  "plant": "a potted plant",
+  "lamp": "a lamp",
+  "counter": "a kitchen counter",
+  "sink": "a sink",
+  "stove": "a stove",
+  "tv": "a television",
+  "sign": "a sign with text"
+ }
+}

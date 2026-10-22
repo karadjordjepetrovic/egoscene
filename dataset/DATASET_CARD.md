@@ -92,6 +92,8 @@ Share of pixels and of frames in which the class appears (sampled every 40th fra
 - **Wall-dominated.** Walls are 68 % of pixels and fairly bare, which makes per-pixel averages optimistic; report per-class metrics.
 - **`door` and `window` are never visible as labelled pixels.** The front door isn't in view on the routes, and the translucent window glass doesn't write a stencil value (the view through it is labelled `outdoor`). Treat both classes as absent in v1.
 - **Synthetic look.** No sensor noise, motion blur, rolling shutter, lens distortion or auto-exposure. Models trained on real data face a sim-to-real gap; that gap is part of what the benchmark measures, not a bug.
+- **Counter and sink are textured blockouts**, not real models: segmentation models fairly call them "cabinet", "step" or "bathtub". Flag them in results.
+- **Evening interiors are overexposed** (bright, washed-out walls), so the evening split partly measures exposure, not dusk lighting: segmentation drops ~8 mIoU points in evening vs ~1 at night.
 - **No people or dynamic objects.**
 - **Ground-truth poses.** Poses are exact; there is no simulated tracking error.
 - **IDs are per version.** Class and instance IDs may change in v2; always read them from each walk's `meta.json`.
