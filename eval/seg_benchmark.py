@@ -88,7 +88,8 @@ class SegFormerModel(_HFBase):
             logits = self._timed(lambda: self.model(pixel_values=pix).logits)
             logits = torch.nn.functional.interpolate(logits.float(), size=rgb.shape[:2], mode="bilinear",
                                                      align_corners=False)
-        return self.lut[logits.argmax(1)[0].cpu().numpy()]
+        self.last_raw = logits.argmax(1)[0].cpu().numpy()       # raw ADE20K ids, for diagnostics
+        return self.lut[self.last_raw]
 
 
 class CLIPSegModel(_HFBase):
@@ -197,6 +198,7 @@ def main():
     os.makedirs(os.path.join(out_dir, "figures"), exist_ok=True)
     conf = np.zeros((nC, nC), np.int64)
     conf_light = {}
+    ade_hist = None                          # SegFormer only: GT class x raw ADE20K label counts
     frame_scores = []                        # (pixel acc, walk, index)
     t0, warmed = time.time(), False
     for w in walks:
@@ -216,6 +218,13 @@ def main():
                     model.times_ms.clear(); warmed = True
                 pred = model(fr["rgb"])
             pred = np.where(pred == 255, OTHER, pred)
+            if getattr(model, "last_raw", None) is not None:
+                nA = len(model.model.config.id2label)
+                if ade_hist is None:
+                    ade_hist = np.zeros((len(classes), nA), np.int64)
+                for c in np.unique(gt):
+                    if c in scored:
+                        ade_hist[c] += np.bincount(model.last_raw[gt == c].ravel(), minlength=nA)
             m = np.isin(gt, scored)
             c = np.bincount(gt[m].astype(np.int64) * nC + pred[m], minlength=nC * nC).reshape(nC, nC)
             conf += c; cl += c
@@ -235,12 +244,21 @@ def main():
         if row.sum():
             j = int(row.argmax())
             confused[classes[c]] = ("other" if j == OTHER else classes[j], float(row[j] / conf[c].sum()))
+    top_ade = {}
+    if ade_hist is not None:
+        id2label = model.model.config.id2label
+        for c in scored:
+            tot = ade_hist[c].sum()
+            if tot:
+                top = np.argsort(ade_hist[c])[::-1][:3]
+                top_ade[classes[c]] = [(id2label[int(t)], float(ade_hist[c, t] / tot)) for t in top if ade_hist[c, t]]
     ms = model.times_ms
     summary = {"model": args.model, "hf_id": hf_id, "fp16": bool(args.fp16), "device": device,
                "input_hw": getattr(model, "input_hw", None), "stride": args.stride,
                "ms_per_frame": {"median": float(np.median(ms)), "p95": float(np.percentile(ms, 95))} if ms else None,
                "miou": miou, "pixel_acc": acc, "iou": {classes[k]: v for k, v in iou.items()},
-               "by_lighting": by_light, "most_confused_with": confused, "mapping": model.mapping}
+               "by_lighting": by_light, "most_confused_with": confused, "mapping": model.mapping,
+               "top_ade_labels": top_ade}
     json.dump(summary, open(os.path.join(out_dir, "summary.json"), "w"), indent=1)
     with open(os.path.join(out_dir, "confusion.csv"), "w", newline="") as fh:
         wr = csv.writer(fh); names = classes + ["other"]
@@ -257,10 +275,14 @@ def main():
     L += ["| Split | mIoU (%) ↑ | Pixel acc (%) ↑ |", "|---|---|---|",
           f"| **all** | {miou*100:.1f} | {acc*100:.1f} |"]
     L += [f"| {k} | {v['miou']*100:.1f} | {v['pixel_acc']*100:.1f} |" for k, v in by_light.items()]
-    L += ["", "| Class | IoU (%) ↑ | Most confused with |", "|---|---|---|"]
+    hdr = "| Class | IoU (%) ↑ | Most confused with |" + (" Top ADE20K labels predicted |" if top_ade else "")
+    L += ["", hdr, "|---|---|---|" + ("---|" if top_ade else "")]
     for k, v in sorted(iou.items(), key=lambda kv: kv[1]):
         cw = confused.get(classes[k])
-        L.append(f"| {classes[k]} | {v*100:.1f} | {f'{cw[0]} ({cw[1]*100:.0f} %)' if cw else '-'} |")
+        line = f"| {classes[k]} | {v*100:.1f} | {f'{cw[0]} ({cw[1]*100:.0f} %)' if cw else '-'} |"
+        if top_ade:
+            line += " " + ", ".join(f"{n.split(',')[0]} {p*100:.0f}%" for n, p in top_ade.get(classes[k], [])) + " |"
+        L.append(line)
     L.append("")
 
     frame_scores.sort()
