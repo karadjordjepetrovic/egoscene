@@ -7,3 +7,4 @@ __pycache__/
 eval/results/depth/gt-noise*/
 eval/results/seg/gt-noise/
 eval/results/det/gt-jitter/
+eval/results/text/gt-oracle/

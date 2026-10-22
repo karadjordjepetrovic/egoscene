@@ -1,0 +1,332 @@
+walk_id,lighting,frame,sign,gt_text,ocr_text,detected,read,cer,distance_m,height_px
+walk_01,day,50,Sign_04,OCTOBER,QCTOBER,True,False,0.14285714285714285,3.5899999141693115,39
+walk_01,day,55,Sign_04,OCTOBER,DCTCOER,True,False,0.42857142857142855,3.8540000915527344,36
+walk_01,day,60,Sign_04,OCTOBER,0m8,True,False,1.0,3.9149999618530273,36
+walk_01,day,65,Sign_04,OCTOBER,OCTCAE),True,False,0.42857142857142855,3.9019999504089355,35
+walk_01,day,70,Sign_04,OCTOBER,66 ',True,False,1.0,3.8350000381469727,36
+walk_01,day,75,Sign_04,OCTOBER,47.8R,True,False,0.8571428571428571,3.7249999046325684,37
+walk_01,day,80,Sign_04,OCTOBER,OSTOBER,True,False,0.14285714285714285,3.565000057220459,40
+walk_01,day,85,Sign_04,OCTOBER,"uctdod,",True,False,0.7142857142857143,3.312000036239624,42
+walk_01,day,135,Sign_02,Kitchen,Kitchen,True,True,0.0,2.8529999256134033,36
+walk_01,day,140,Sign_02,Kitchen,Kitchen,True,True,0.0,2.859999895095825,35
+walk_01,day,145,Sign_02,Kitchen,Kitchen,True,True,0.0,2.7249999046325684,38
+walk_01,day,150,Sign_02,Kitchen,Kitchen,True,True,0.0,2.5350000858306885,41
+walk_01,day,155,Sign_02,Kitchen,Kitchen,True,True,0.0,2.303999900817871,46
+walk_01,day,160,Sign_02,Kitchen,Kitche_,True,False,0.14285714285714285,2.0309998989105225,51
+walk_02,overcast,95,Sign_02,Kitchen,Krtchen,True,False,0.14285714285714285,4.001999855041504,26
+walk_02,overcast,100,Sign_02,Kitchen,Kitchen,True,True,0.0,3.75,29
+walk_02,overcast,100,Sign_03,Welcome Home,Welcom,True,False,0.45454545454545453,2.686000108718872,30
+walk_02,overcast,105,Sign_02,Kitchen,Kitchen,True,True,0.0,3.2009999752044678,35
+walk_02,overcast,105,Sign_03,Welcome Home,Welcome Home,True,True,0.0,3.0350000858306885,28
+walk_02,overcast,110,Sign_02,Kitchen,Kitchen,True,True,0.0,2.806999921798706,41
+walk_02,overcast,110,Sign_03,Welcome Home,Welcome Home,True,True,0.0,3.0999999046325684,27
+walk_02,overcast,115,Sign_02,Kitchen,,False,False,1.0,2.6600000858306885,39
+walk_02,overcast,115,Sign_03,Welcome Home,Welconic Hoine,True,False,0.45454545454545453,3.072000026702881,26
+walk_02,overcast,120,Sign_03,Welcome Home,Weicame Home,True,False,0.18181818181818182,2.997999906539917,27
+walk_02,overcast,125,Sign_03,Welcome Home,Welcome Home,True,True,0.0,2.878999948501587,28
+walk_02,overcast,130,Sign_03,Welcome Home,Welcome Home,True,True,0.0,2.7160000801086426,30
+walk_02,overcast,135,Sign_03,Welcome Home,Welcome Home,True,True,0.0,2.4649999141693115,34
+walk_02,overcast,140,Sign_02,Kitchen,Kitchen,True,True,0.0,2.5959999561309814,43
+walk_02,overcast,265,Sign_03,Welcome Home,Wclcome Home,True,False,0.09090909090909091,3.8949999809265137,21
+walk_02,overcast,270,Sign_03,Welcome Home,YIolccic Homz,True,False,0.6363636363636364,4.23799991607666,19
+walk_02,overcast,275,Sign_03,Welcome Home,iulcia Hcnc,True,False,0.7272727272727273,4.295000076293945,18
+walk_02,overcast,280,Sign_03,Welcome Home,nE,True,False,0.9090909090909091,4.214000225067139,19
+walk_02,overcast,285,Sign_03,Welcome Home,Weleoxe Hoine,True,False,0.36363636363636365,4.1020002365112305,20
+walk_02,overcast,290,Sign_03,Welcome Home,Wtkoma Holne,True,False,0.5454545454545454,3.9660000801086426,21
+walk_02,overcast,295,Sign_03,Welcome Home,Ulelcomc HoMR,True,False,0.36363636363636365,3.812000036239624,21
+walk_02,overcast,300,Sign_03,Welcome Home,Welr me Homa,True,False,0.2727272727272727,3.6530001163482666,22
+walk_02,overcast,305,Sign_03,Welcome Home,Welcuhie Home,True,False,0.2727272727272727,3.4779999256134033,23
+walk_02,overcast,310,Sign_03,Welcome Home,Welcome Homa,True,False,0.09090909090909091,3.2829999923706055,24
+walk_02,overcast,315,Sign_03,Welcome Home,Welcame Home,True,False,0.09090909090909091,3.078000068664551,26
+walk_02,overcast,320,Sign_03,Welcome Home,Welcame Home,True,False,0.09090909090909091,2.875,29
+walk_02,overcast,325,Sign_03,Welcome Home,Welcome Home,True,True,0.0,2.6670000553131104,32
+walk_02,overcast,330,Sign_03,Welcome Home,Welcome Hoie,True,False,0.09090909090909091,2.4709999561309814,33
+walk_02,overcast,335,Sign_03,Welcome Home,Welcome Home,True,True,0.0,2.3010001182556152,35
+walk_02,overcast,340,Sign_03,Welcome Home,Welcome Home,True,True,0.0,2.1519999504089355,37
+walk_02,overcast,345,Sign_03,Welcome Home,Welcome Home,True,True,0.0,2.0260000228881836,40
+walk_02,overcast,350,Sign_03,Welcome Home,Welcome Home,True,True,0.0,1.9290000200271606,44
+walk_02,overcast,355,Sign_03,Welcome Home,Welcome Home,True,True,0.0,1.850000023841858,47
+walk_02,overcast,355,Sign_04,OCTOBER,,False,False,1.0,1.7799999713897705,73
+walk_02,overcast,360,Sign_03,Welcome Home,Welcome Home,True,True,0.0,1.781000018119812,48
+walk_02,overcast,360,Sign_04,OCTOBER,OCTOB,True,False,0.2857142857142857,1.680999994277954,83
+walk_02,overcast,365,Sign_03,Welcome Home,Welcome Home,True,True,0.0,1.718000054359436,47
+walk_02,overcast,365,Sign_04,OCTOBER,OCTOBER,True,True,0.0,1.5520000457763672,90
+walk_02,overcast,370,Sign_03,Welcome Home,Welcome Home,True,True,0.0,1.6549999713897705,48
+walk_02,overcast,370,Sign_04,OCTOBER,OCTOBER,True,True,0.0,1.3919999599456787,98
+walk_02,overcast,375,Sign_03,Welcome Home,Welcome Home,True,True,0.0,1.5820000171661377,50
+walk_02,overcast,375,Sign_04,OCTOBER,OCTOBER,True,True,0.0,1.222000002861023,113
+walk_02,overcast,380,Sign_03,Welcome Home,Welcome Home,True,True,0.0,1.4989999532699585,54
+walk_02,overcast,380,Sign_04,OCTOBER,OCTOBE,True,False,0.14285714285714285,1.0420000553131104,134
+walk_02,overcast,385,Sign_03,Welcome Home,Welcome Hom,True,False,0.09090909090909091,1.4010000228881836,59
+walk_02,overcast,385,Sign_04,OCTOBER,,False,False,1.0,0.8730000257492065,102
+walk_02,overcast,390,Sign_03,Welcome Home,Welcome Home,True,True,0.0,1.2910000085830688,64
+walk_03,evening,0,Sign_02,Kitchen,,False,False,1.0,7.125,14
+walk_03,evening,0,Sign_04,OCTOBER,,False,False,1.0,1.7630000114440918,83
+walk_03,evening,5,Sign_02,Kitchen,,False,False,1.0,6.9679999351501465,15
+walk_03,evening,5,Sign_04,OCTOBER,NUUR,True,False,0.8571428571428571,1.5399999618530273,96
+walk_03,evening,10,Sign_02,Kitchen,Eddic,True,False,1.0,6.791500091552734,15
+walk_03,evening,10,Sign_04,OCTOBER,T8F8,True,False,0.8571428571428571,1.3070000410079956,121
+walk_03,evening,15,Sign_02,Kitchen,,False,False,1.0,6.598999977111816,14
+walk_03,evening,15,Sign_04,OCTOBER,CCTOBER,True,False,0.14285714285714285,1.0700000524520874,155
+walk_03,evening,20,Sign_02,Kitchen,,False,False,1.0,6.392000198364258,15
+walk_03,evening,20,Sign_04,OCTOBER,OCTOBER,True,True,0.0,0.8320000171661377,205
+walk_03,evening,25,Sign_02,Kitchen,KnehFoi,True,False,0.8571428571428571,6.166999816894531,16
+walk_03,evening,25,Sign_04,OCTOBER,OCTOBER,True,True,0.0,0.6140000224113464,211
+walk_03,evening,30,Sign_02,Kitchen,Kilyte,True,False,0.5714285714285714,5.929999828338623,16
+walk_03,evening,30,Sign_04,OCTOBER,Uo,True,False,0.8571428571428571,0.47999998927116394,159
+walk_03,evening,35,Sign_02,Kitchen,Eidelien,True,False,0.7142857142857143,5.691999912261963,18
+walk_03,evening,35,Sign_04,OCTOBER,,False,False,1.0,0.3799999952316284,135
+walk_03,evening,40,Sign_02,Kitchen,ilchen,True,False,0.2857142857142857,5.445000171661377,19
+walk_03,evening,45,Sign_02,Kitchen,Viltcmen,True,False,0.42857142857142855,4.801000118255615,22
+walk_03,evening,50,Sign_02,Kitchen,Kitchen,True,True,0.0,4.123000144958496,26
+walk_03,evening,50,Sign_03,Welcome Home,Welcome Home,True,True,0.0,1.7230000495910645,51
+walk_03,evening,55,Sign_02,Kitchen,Kitchen,True,True,0.0,4.5289998054504395,22
+walk_03,evening,55,Sign_03,Welcome Home,Welcome Hom,True,False,0.09090909090909091,1.309999942779541,70
+walk_03,evening,60,Sign_02,Kitchen,Kitchen,True,True,0.0,4.445000171661377,24
+walk_03,evening,125,Sign_02,Kitchen,Kitchen,True,True,0.0,3.1019999980926514,33
+walk_03,evening,130,Sign_02,Kitchen,Kitchen,True,True,0.0,3.4170000553131104,29
+walk_03,evening,135,Sign_02,Kitchen,Kitchen,True,True,0.0,3.23799991607666,32
+walk_03,evening,140,Sign_02,Kitchen,Kitchen,True,True,0.0,2.8429999351501465,35
+walk_03,evening,230,Sign_02,Kitchen,,False,False,1.0,3.174499988555908,36
+walk_03,evening,235,Sign_02,Kitchen,,False,False,1.0,3.5139999389648438,32
+walk_03,evening,240,Sign_02,Kitchen,,False,False,1.0,3.2880001068115234,35
+walk_03,evening,240,Sign_03,Welcome Home,,False,False,1.0,4.171000003814697,18
+walk_03,evening,245,Sign_02,Kitchen,,False,False,1.0,3.0480000972747803,38
+walk_03,evening,250,Sign_02,Kitchen,,False,False,1.0,2.7890000343322754,42
+walk_03,evening,255,Sign_02,Kitchen,,False,False,1.0,2.424999952316284,47
+walk_03,evening,260,Sign_02,Kitchen,,False,False,1.0,1.9869999885559082,59
+walk_03,evening,265,Sign_02,Kitchen,,False,False,1.0,1.6690000295639038,71
+walk_04,night,0,Sign_02,Kitchen,Kitchen,True,True,0.0,4.03000020980835,25
+walk_04,night,5,Sign_02,Kitchen,Kitclicu,True,False,0.5714285714285714,3.9179999828338623,25
+walk_04,night,10,Sign_02,Kitchen,Kitchen,True,True,0.0,3.7950000762939453,27
+walk_04,night,15,Sign_02,Kitchen,Kirchen,True,False,0.14285714285714285,3.6600000858306885,28
+walk_04,night,20,Sign_02,Kitchen,Knchen,True,False,0.2857142857142857,3.507999897003174,30
+walk_04,night,25,Sign_02,Kitchen,Kitchen,True,True,0.0,3.3259999752044678,31
+walk_04,night,30,Sign_02,Kitchen,Kitchen,True,True,0.0,3.117000102996826,33
+walk_04,night,35,Sign_02,Kitchen,Kitchen,True,True,0.0,2.884000062942505,35
+walk_04,night,40,Sign_02,Kitchen,Kitchen,True,True,0.0,2.621999979019165,39
+walk_04,night,45,Sign_02,Kitchen,,False,False,1.0,2.3480000495910645,43
+walk_05,day,55,Sign_02,Kitchen,Kitchen,True,True,0.0,4.091000080108643,25
+walk_05,day,60,Sign_02,Kitchen,Kitchen,True,True,0.0,3.8429999351501465,29
+walk_05,day,65,Sign_02,Kitchen,Kitchen,True,True,0.0,3.4820001125335693,32
+walk_05,day,70,Sign_02,Kitchen,Kitchen,True,True,0.0,3.2100000381469727,34
+walk_05,day,75,Sign_02,Kitchen,Kitchen,True,True,0.0,3.0390000343322754,35
+walk_05,day,80,Sign_02,Kitchen,Kitchen,True,True,0.0,3.129499912261963,33
+walk_05,day,150,Sign_02,Kitchen,Kitchen,True,True,0.0,3.9019999504089355,29
+walk_05,day,150,Sign_03,Welcome Home,cicome Honie,True,False,0.45454545454545453,4.310999870300293,19
+walk_05,day,155,Sign_02,Kitchen,Knchen,True,False,0.2857142857142857,4.271999835968018,26
+walk_05,day,155,Sign_03,Welcome Home,ecomc HOME,True,False,0.2727272727272727,3.6619999408721924,21
+walk_05,day,160,Sign_02,Kitchen,Krcheh,True,False,0.42857142857142855,4.103000164031982,28
+walk_05,day,160,Sign_03,Welcome Home,welcome Hone,True,False,0.09090909090909091,3.372999906539917,23
+walk_05,day,165,Sign_02,Kitchen,Kilchen,True,False,0.14285714285714285,3.9235000610351562,29
+walk_05,day,165,Sign_03,Welcome Home,Wclcome Home,True,False,0.09090909090909091,3.1019999980926514,26
+walk_05,day,170,Sign_02,Kitchen,Knchen,True,False,0.2857142857142857,3.753000020980835,30
+walk_05,day,170,Sign_03,Welcome Home,Welca,True,False,0.6363636363636364,2.877000093460083,27
+walk_05,day,175,Sign_02,Kitchen,Knchen,True,False,0.2857142857142857,3.5759999752044678,30
+walk_05,day,180,Sign_02,Kitchen,Kitchen,True,True,0.0,3.3929998874664307,33
+walk_05,day,185,Sign_02,Kitchen,Kitchen,True,True,0.0,3.197000026702881,35
+walk_05,day,190,Sign_02,Kitchen,Kitchen,True,True,0.0,2.512500047683716,49
+walk_05,day,190,Sign_03,Welcome Home,Welcome Home,True,True,0.0,2.809000015258789,28
+walk_05,day,225,Sign_03,Welcome Home,Welcome Home,True,True,0.0,3.130000114440918,27
+walk_05,day,230,Sign_03,Welcome Home,Welcomie Hcma,True,False,0.2727272727272727,3.1389999389648438,27
+walk_05,day,235,Sign_03,Welcome Home,Welcome Home,True,True,0.0,3.0,27
+walk_05,day,240,Sign_03,Welcome Home,Welcome Home,True,True,0.0,2.816999912261963,27
+walk_05,day,245,Sign_03,Welcome Home,Welcome Home,True,True,0.0,2.618000030517578,30
+walk_05,day,250,Sign_03,Welcome Home,Welcore Home,True,False,0.09090909090909091,2.4170000553131104,33
+walk_05,day,250,Sign_04,OCTOBER,,False,False,1.0,1.9910000562667847,65
+walk_05,day,255,Sign_03,Welcome Home,Welcame Home,True,False,0.09090909090909091,2.2160000801086426,37
+walk_05,day,255,Sign_04,OCTOBER,OCTOBEF,True,False,0.14285714285714285,1.7549999952316284,77
+walk_05,day,260,Sign_03,Welcome Home,Welcome Home,True,True,0.0,2.0139999389648438,42
+walk_05,day,260,Sign_04,OCTOBER,OCTOBER,True,True,0.0,1.4900000095367432,94
+walk_05,day,265,Sign_03,Welcome Home,Welcome Home,True,True,0.0,1.8140000104904175,45
+walk_05,day,265,Sign_04,OCTOBER,OCTOBE,True,False,0.14285714285714285,1.2059999704360962,114
+walk_05,day,270,Sign_03,Welcome Home,Welcome Home,True,True,0.0,1.6089999675750732,48
+walk_05,day,275,Sign_03,Welcome Home,Welcome Home,True,True,0.0,1.3980000019073486,57
+walk_06,overcast,0,Sign_02,Kitchen,Kichcn,True,False,0.2857142857142857,5.379000186920166,19
+walk_06,overcast,5,Sign_02,Kitchen,Kulcilell,True,False,0.8571428571428571,5.189000129699707,19
+walk_06,overcast,5,Sign_03,Welcome Home,Welcome,True,False,0.36363636363636365,1.3830000162124634,61
+walk_06,overcast,10,Sign_02,Kitchen,Kitcllel,True,False,0.42857142857142855,5.0269999504089355,19
+walk_06,overcast,15,Sign_02,Kitchen,Kitchel,True,False,0.14285714285714285,4.656000137329102,21
+walk_06,overcast,20,Sign_02,Kitchen,Kitchen,True,True,0.0,3.5480000972747803,30
+walk_06,overcast,100,Sign_02,Kitchen,Kitchen,True,True,0.0,3.9670000076293945,25
+walk_06,overcast,105,Sign_02,Kitchen,Kitthen,True,False,0.14285714285714285,3.9509999752044678,26
+walk_06,overcast,110,Sign_02,Kitchen,Kitcrien,True,False,0.2857142857142857,3.7039999961853027,30
+walk_06,overcast,115,Sign_02,Kitchen,Kitchen,True,True,0.0,3.5220000743865967,31
+walk_06,overcast,120,Sign_02,Kitchen,Kitchen,True,True,0.0,3.3959999084472656,32
+walk_06,overcast,125,Sign_02,Kitchen,Kitchen,True,True,0.0,3.246000051498413,33
+walk_06,overcast,130,Sign_02,Kitchen,Kitchen,True,True,0.0,2.9260001182556152,35
+walk_06,overcast,135,Sign_02,Kitchen,Kitchen,True,True,0.0,2.5329999923706055,39
+walk_06,overcast,140,Sign_02,Kitchen,Kitchen,True,True,0.0,2.2170000076293945,45
+walk_06,overcast,145,Sign_02,Kitchen,Ki,True,False,0.7142857142857143,1.940999984741211,51
+walk_07,evening,95,Sign_02,Kitchen,Kicchen,True,False,0.14285714285714285,3.437999963760376,28
+walk_07,evening,100,Sign_02,Kitchen,Kilchen,True,False,0.14285714285714285,4.0980000495910645,25
+walk_07,evening,105,Sign_02,Kitchen,Kitclien,True,False,0.2857142857142857,3.8550000190734863,27
+walk_07,evening,110,Sign_02,Kitchen,Kitchen,True,True,0.0,3.63100004196167,30
+walk_07,evening,115,Sign_02,Kitchen,Kltehen,True,False,0.2857142857142857,3.450500011444092,32
+walk_07,evening,120,Sign_02,Kitchen,Kilchen,True,False,0.14285714285714285,3.316999912261963,34
+walk_07,evening,125,Sign_02,Kitchen,Kitchen,True,True,0.0,3.2209999561309814,35
+walk_07,evening,130,Sign_02,Kitchen,Kitchen,True,True,0.0,3.171999931335449,35
+walk_07,evening,135,Sign_02,Kitchen,Kitchen,True,True,0.0,3.2070000171661377,32
+walk_07,evening,140,Sign_02,Kitchen,Kitchen,True,True,0.0,2.9010000228881836,35
+walk_07,evening,265,Sign_03,Welcome Home,Wlelec Hama,True,False,0.6363636363636364,4.414999961853027,18
+walk_07,evening,270,Sign_02,Kitchen,Knehelt,True,False,0.7142857142857143,4.547999858856201,23
+walk_07,evening,270,Sign_03,Welcome Home,com Hame,True,False,0.45454545454545453,3.703000068664551,23
+walk_07,evening,275,Sign_02,Kitchen,Kilchen,True,False,0.14285714285714285,4.418000221252441,23
+walk_07,evening,275,Sign_03,Welcome Home,Welcome Home,True,True,0.0,3.569999933242798,24
+walk_07,evening,280,Sign_02,Kitchen,Kitchen,True,True,0.0,4.019000053405762,27
+walk_07,evening,280,Sign_03,Welcome Home,WWe leome Homg,True,False,0.2727272727272727,3.7330000400543213,22
+walk_07,evening,285,Sign_02,Kitchen,Kitchen,True,True,0.0,3.3450000286102295,35
+walk_07,evening,285,Sign_03,Welcome Home,Yreicoime MUC,True,False,0.7272727272727273,3.934999942779541,20
+walk_07,evening,290,Sign_03,Welcome Home,Wek:onie Hcmo,True,False,0.5454545454545454,3.990999937057495,20
+walk_07,evening,295,Sign_03,Welcome Home,Welcomc Home,True,False,0.09090909090909091,3.8239998817443848,21
+walk_07,evening,300,Sign_03,Welcome Home,Welcume Homc,True,False,0.18181818181818182,3.556999921798706,22
+walk_07,evening,305,Sign_03,Welcome Home,weicome Hone,True,False,0.18181818181818182,3.3510000705718994,23
+walk_07,evening,310,Sign_03,Welcome Home,Wclcoine Home,True,False,0.2727272727272727,3.180000066757202,25
+walk_07,evening,315,Sign_03,Welcome Home,Welcene Home,True,False,0.18181818181818182,3.0409998893737793,26
+walk_07,evening,320,Sign_03,Welcome Home,Welcome Hame,True,False,0.09090909090909091,2.9260001182556152,28
+walk_07,evening,325,Sign_03,Welcome Home,Welcore Home,True,False,0.09090909090909091,2.8239998817443848,29
+walk_07,evening,325,Sign_04,OCTOBER,,False,False,1.0,2.6029999256134033,50
+walk_07,evening,330,Sign_03,Welcome Home,Welcome Home,True,True,0.0,2.7320001125335693,30
+walk_07,evening,330,Sign_04,OCTOBER,,False,False,1.0,2.434999942779541,54
+walk_07,evening,335,Sign_03,Welcome Home,Wlelcome Home,True,False,0.09090909090909091,2.6500000953674316,30
+walk_07,evening,335,Sign_04,OCTOBER,,False,False,1.0,2.26200008392334,59
+walk_07,evening,340,Sign_03,Welcome Home,Welcome Hame,True,False,0.09090909090909091,2.563999891281128,31
+walk_07,evening,340,Sign_04,OCTOBER,OCt,True,False,0.5714285714285714,2.072999954223633,64
+walk_07,evening,345,Sign_03,Welcome Home,Welcome Hame,True,False,0.09090909090909091,2.4690001010894775,32
+walk_07,evening,345,Sign_04,OCTOBER,OCTOBI,True,False,0.2857142857142857,1.86899995803833,72
+walk_07,evening,350,Sign_03,Welcome Home,Welcome Home,True,True,0.0,2.374000072479248,34
+walk_07,evening,350,Sign_04,OCTOBER,OCTOBER,True,True,0.0,1.6640000343322754,83
+walk_07,evening,355,Sign_03,Welcome Home,Welcame Hom,True,False,0.18181818181818182,2.2730000019073486,36
+walk_07,evening,355,Sign_04,OCTOBER,OCT-,True,False,0.5714285714285714,1.4509999752044678,94
+walk_07,evening,360,Sign_03,Welcome Home,Welcome Home,True,True,0.0,2.1579999923706055,38
+walk_07,evening,365,Sign_03,Welcome Home,Welcome Home,True,True,0.0,2.0455000400543213,39
+walk_07,evening,370,Sign_03,Welcome Home,Welcome Home,True,True,0.0,1.937000036239624,42
+walk_07,evening,375,Sign_03,Welcome Home,Welcome Home,True,True,0.0,1.8179999589920044,45
+walk_07,evening,380,Sign_03,Welcome Home,Welcome Home,True,True,0.0,1.6970000267028809,47
+walk_07,evening,385,Sign_03,Welcome Home,Welcome Home,True,True,0.0,1.5789999961853027,51
+walk_07,evening,390,Sign_03,Welcome Home,Welcome Hom,True,False,0.09090909090909091,1.4509999752044678,56
+walk_08,night,0,Sign_02,Kitchen,Hucliicn,True,False,1.0,6.9679999351501465,14
+walk_08,night,0,Sign_04,OCTOBER,,False,False,1.0,1.7569999694824219,84
+walk_08,night,5,Sign_02,Kitchen,Kitchtn,True,False,0.14285714285714285,6.497000217437744,15
+walk_08,night,5,Sign_04,OCTOBER,(HUHER,True,False,0.7142857142857143,1.5230000019073486,96
+walk_08,night,10,Sign_02,Kitchen,Anthcn,True,False,0.5714285714285714,6.131999969482422,17
+walk_08,night,10,Sign_04,OCTOBER,'ANRRR,True,False,0.8571428571428571,1.2949999570846558,119
+walk_08,night,15,Sign_02,Kitchen,Ktcian,True,False,0.42857142857142855,5.833000183105469,17
+walk_08,night,15,Sign_04,OCTOBER,OCFOBER,True,False,0.14285714285714285,1.0729999542236328,150
+walk_08,night,20,Sign_02,Kitchen,Hatcicn,True,False,0.5714285714285714,5.599999904632568,17
+walk_08,night,20,Sign_04,OCTOBER,OCTOBER,True,True,0.0,0.8569999933242798,190
+walk_08,night,25,Sign_02,Kitchen,Kitcneli,True,False,0.42857142857142855,5.431500434875488,18
+walk_08,night,25,Sign_04,OCTOBER,OCTOBER,True,True,0.0,0.6370000243186951,264
+walk_08,night,30,Sign_02,Kitchen,#ilchan,True,False,0.42857142857142855,5.320000171661377,19
+walk_08,night,30,Sign_04,OCTOBER,OCTOBL_,True,False,0.2857142857142857,0.4490000009536743,222
+walk_08,night,35,Sign_02,Kitchen,Kitcheli,True,False,0.2857142857142857,5.256999969482422,20
+walk_08,night,35,Sign_04,OCTOBER,,False,False,1.0,0.3070000112056732,205
+walk_08,night,40,Sign_02,Kitchen,Kilthcn,True,False,0.42857142857142855,5.21999979019165,19
+walk_08,night,45,Sign_02,Kitchen,Kilcen,True,False,0.2857142857142857,5.177000045776367,19
+walk_08,night,50,Sign_02,Kitchen,Kitchen,True,True,0.0,5.1020002365112305,19
+walk_08,night,50,Sign_03,Welcome Home,Welcon,True,False,0.5454545454545454,1.4600000381469727,58
+walk_08,night,55,Sign_02,Kitchen,Kcken,True,False,0.42857142857142855,4.947999954223633,21
+walk_08,night,60,Sign_02,Kitchen,Kilclen,True,False,0.2857142857142857,4.644999980926514,22
+walk_08,night,65,Sign_02,Kitchen,Kitchen,True,True,0.0,4.145500183105469,24
+walk_08,night,70,Sign_02,Kitchen,Kitchen,True,True,0.0,3.5840001106262207,28
+walk_08,night,75,Sign_02,Kitchen,Kitchen,True,True,0.0,3.0290000438690186,36
+walk_08,night,135,Sign_04,OCTOBER,OCTOBER,True,True,0.0,3.006999969482422,49
+walk_08,night,140,Sign_04,OCTOBER,OCTOBEF,True,False,0.14285714285714285,3.0820000171661377,47
+walk_08,night,145,Sign_04,OCTOBER,OCT(,True,False,0.5714285714285714,2.9719998836517334,47
+walk_08,night,150,Sign_04,OCTOBER,,False,False,1.0,2.818000078201294,47
+walk_08,night,270,Sign_02,Kitchen,,False,False,1.0,3.619999885559082,31
+walk_08,night,275,Sign_02,Kitchen,,False,False,1.0,3.4830000400543213,32
+walk_08,night,275,Sign_03,Welcome Home,Welcrubta Hrubt,True,False,0.8181818181818182,4.379000186920166,18
+walk_08,night,280,Sign_02,Kitchen,,False,False,1.0,3.2320001125335693,35
+walk_08,night,285,Sign_02,Kitchen,,False,False,1.0,2.9240000247955322,39
+walk_08,night,290,Sign_02,Kitchen,,False,False,1.0,2.569999933242798,45
+walk_08,night,295,Sign_02,Kitchen,,False,False,1.0,2.2044999599456787,53
+walk_08,night,300,Sign_02,Kitchen,,False,False,1.0,1.9160000085830688,61
+walk_09,day,0,Sign_02,Kitchen,Kitchen,True,True,0.0,4.630000114440918,23
+walk_09,day,5,Sign_02,Kitchen,Kitchen,True,True,0.0,4.468500137329102,23
+walk_09,day,5,Sign_03,Welcome Home,Welcome,True,False,0.36363636363636365,1.8220000267028809,45
+walk_09,day,10,Sign_02,Kitchen,Kitcheh],True,False,0.14285714285714285,4.790999889373779,20
+walk_09,day,10,Sign_03,Welcome Home,Welcome Hom,True,False,0.09090909090909091,1.4049999713897705,66
+walk_09,day,15,Sign_02,Kitchen,Ktcnan,True,False,0.42857142857142855,4.910999774932861,20
+walk_09,day,20,Sign_02,Kitchen,Kitchen,True,True,0.0,3.9059998989105225,27
+walk_09,day,135,Sign_02,Kitchen,,False,False,1.0,2.6610000133514404,37
+walk_09,day,140,Sign_02,Kitchen,Kitchen,True,True,0.0,2.6700000762939453,37
+walk_09,day,145,Sign_02,Kitchen,Kitchen,True,True,0.0,2.6530001163482666,38
+walk_09,day,150,Sign_02,Kitchen,Kitchen,True,True,0.0,2.625999927520752,39
+walk_09,day,155,Sign_02,Kitchen,Kitchen,True,True,0.0,2.5910000801086426,40
+walk_09,day,160,Sign_02,Kitchen,Kitchen,True,True,0.0,2.5420000553131104,43
+walk_09,day,165,Sign_02,Kitchen,Kitchen,True,True,0.0,2.4809999465942383,44
+walk_09,day,170,Sign_02,Kitchen,Kitchen,True,True,0.0,2.4035000801086426,45
+walk_09,day,175,Sign_02,Kitchen,Kitchen,True,True,0.0,2.302999973297119,47
+walk_09,day,180,Sign_02,Kitchen,Knchen,True,False,0.2857142857142857,2.177000045776367,51
+walk_09,day,185,Sign_02,Kitchen,Kchen,True,False,0.2857142857142857,2.0160000324249268,55
+walk_09,day,190,Sign_02,Kitchen,Kchrn,True,False,0.42857142857142855,1.7680000066757202,64
+walk_09,day,240,Sign_02,Kitchen,,False,False,1.0,3.5339999198913574,31
+walk_09,day,245,Sign_02,Kitchen,,False,False,1.0,3.3420000076293945,34
+walk_09,day,250,Sign_02,Kitchen,,False,False,1.0,3.125,36
+walk_09,day,255,Sign_02,Kitchen,,False,False,1.0,2.871999979019165,40
+walk_09,day,260,Sign_02,Kitchen,,False,False,1.0,2.5805001258850098,45
+walk_09,day,265,Sign_02,Kitchen,,False,False,1.0,2.177000045776367,54
+walk_10,overcast,0,Sign_02,Kitchen,Kithi,True,False,0.42857142857142855,6.328999996185303,16
+walk_10,overcast,0,Sign_04,OCTOBER,OCTOBER,True,True,0.0,0.6019999980926514,185
+walk_10,overcast,5,Sign_02,Kitchen,,False,False,1.0,6.158999919891357,16
+walk_10,overcast,5,Sign_04,OCTOBER,OC,True,False,0.7142857142857143,0.5690000057220459,175
+walk_10,overcast,10,Sign_02,Kitchen,Kneng,True,False,0.7142857142857143,5.958000183105469,16
+walk_10,overcast,15,Sign_02,Kitchen,HILDA,True,False,0.8571428571428571,5.747000217437744,18
+walk_10,overcast,20,Sign_02,Kitchen,KitclrI,True,False,0.42857142857142855,5.539999961853027,18
+walk_10,overcast,25,Sign_02,Kitchen,Kitcher,True,False,0.14285714285714285,5.335999965667725,19
+walk_10,overcast,30,Sign_02,Kitchen,Kilchen,True,False,0.14285714285714285,5.15500020980835,21
+walk_10,overcast,35,Sign_02,Kitchen,KitcNcn,True,False,0.2857142857142857,5.0879998207092285,21
+walk_10,overcast,40,Sign_02,Kitchen,Kitcl e,True,False,0.2857142857142857,5.2179999351501465,20
+walk_10,overcast,45,Sign_02,Kitchen,Kilche,True,False,0.2857142857142857,5.116000175476074,20
+walk_10,overcast,45,Sign_03,Welcome Home,We,True,False,0.8181818181818182,1.3830000162124634,58
+walk_10,overcast,50,Sign_02,Kitchen,hitcden,True,False,0.2857142857142857,4.997000217437744,20
+walk_10,overcast,50,Sign_03,Welcome Home,We,True,False,0.8181818181818182,1.2990000247955322,61
+walk_10,overcast,55,Sign_02,Kitchen,Klchcm,True,False,0.5714285714285714,4.9079999923706055,21
+walk_10,overcast,60,Sign_02,Kitchen,Kitclien,True,False,0.2857142857142857,4.585000038146973,23
+walk_10,overcast,65,Sign_02,Kitchen,Kitchen,True,True,0.0,3.6089999675750732,31
+walk_10,overcast,170,Sign_02,Kitchen,Kitchen,True,True,0.0,4.145999908447266,24
+walk_10,overcast,175,Sign_02,Kitchen,Kitchen,True,True,0.0,3.1429998874664307,36
+walk_10,overcast,175,Sign_03,Welcome Home,Welcome Homc,True,False,0.09090909090909091,3.2720000743865967,24
+walk_10,overcast,180,Sign_03,Welcome Home,Wcicoma Home,True,False,0.2727272727272727,3.4149999618530273,23
+walk_10,overcast,185,Sign_03,Welcome Home,Welcome Hote,True,False,0.09090909090909091,3.381999969482422,24
+walk_10,overcast,190,Sign_03,Welcome Home,Welcome nme,True,False,0.18181818181818182,3.2890000343322754,24
+walk_10,overcast,195,Sign_03,Welcome Home,Welcume Home,True,False,0.09090909090909091,3.1619999408721924,26
+walk_10,overcast,200,Sign_03,Welcome Home,Welcome Home,True,True,0.0,3.009000062942505,28
+walk_10,overcast,205,Sign_03,Welcome Home,Welcame Home,True,False,0.09090909090909091,2.799999952316284,29
+walk_10,overcast,210,Sign_03,Welcome Home,Welcome Hom,True,False,0.09090909090909091,2.361999988555908,34
+walk_10,overcast,215,Sign_02,Kitchen,Kitchen,True,True,0.0,2.371000051498413,44
+walk_10,overcast,320,Sign_03,Welcome Home,Walcornc Hoitie,True,False,0.6363636363636364,3.8320000171661377,22
+walk_10,overcast,325,Sign_03,Welcome Home,~ulcicume,True,False,0.6363636363636364,4.370999813079834,19
+walk_10,overcast,330,Sign_03,Welcome Home,Lick-nmio,True,False,0.8181818181818182,4.538000106811523,17
+walk_10,overcast,335,Sign_03,Welcome Home,Mdcome Ilono,True,False,0.6363636363636364,4.468999862670898,18
+walk_10,overcast,340,Sign_03,Welcome Home,"""elcnmc Home",True,False,0.2727272727272727,4.326000213623047,19
+walk_10,overcast,345,Sign_03,Welcome Home,Wcltmc Hamt,True,False,0.5454545454545454,4.183000087738037,19
+walk_10,overcast,350,Sign_03,Welcome Home,(Ycicomp Home,True,False,0.36363636363636365,4.053999900817871,20
+walk_10,overcast,355,Sign_03,Welcome Home,#vedcome Homc,True,False,0.2727272727272727,3.933000087738037,21
+walk_10,overcast,360,Sign_03,Welcome Home,Utekon: me,True,False,0.7272727272727273,3.802000045776367,21
+walk_10,overcast,365,Sign_03,Welcome Home,Qucioile Ham P,True,False,0.7272727272727273,3.6659998893737793,22
+walk_10,overcast,370,Sign_03,Welcome Home,Welcome Homc,True,False,0.09090909090909091,3.5199999809265137,23
+walk_10,overcast,375,Sign_03,Welcome Home,Welcoine Home,True,False,0.18181818181818182,3.3550000190734863,23
+walk_10,overcast,380,Sign_03,Welcome Home,Welcome Hamne,True,False,0.18181818181818182,3.177000045776367,26
+walk_10,overcast,385,Sign_03,Welcome Home,Welcome Home,True,True,0.0,3.002000093460083,28
+walk_10,overcast,390,Sign_03,Welcome Home,Welcome Hame,True,False,0.09090909090909091,2.822999954223633,29
+walk_10,overcast,395,Sign_03,Welcome Home,Welcome Home,True,True,0.0,2.6470000743865967,30
+walk_10,overcast,400,Sign_03,Welcome Home,Welcame Home,True,False,0.09090909090909091,2.492000102996826,32
+walk_10,overcast,405,Sign_03,Welcome Home,Welcome Home,True,True,0.0,2.3489999771118164,34
+walk_10,overcast,410,Sign_03,Welcome Home,Welcome Home,True,True,0.0,2.2139999866485596,37
+walk_10,overcast,415,Sign_03,Welcome Home,Welcome Home,True,True,0.0,2.0929999351501465,41
+walk_10,overcast,415,Sign_04,OCTOBER,,False,False,1.0,1.6799999475479126,79
+walk_10,overcast,420,Sign_03,Welcome Home,Welcome Home,True,True,0.0,1.9809999465942383,43
+walk_10,overcast,420,Sign_04,OCTOBER,OctOi,True,False,0.42857142857142855,1.5740000009536743,87
+walk_10,overcast,425,Sign_03,Welcome Home,Welcome Hoie,True,False,0.09090909090909091,1.8660000562667847,44
+walk_10,overcast,425,Sign_04,OCTOBER,OCTOBER,True,True,0.0,1.4559999704360962,96
+walk_10,overcast,430,Sign_03,Welcome Home,Welcome Home,True,True,0.0,1.7489999532699585,46
+walk_10,overcast,430,Sign_04,OCTOBER,OCTOBER,True,True,0.0,1.319000005722046,106
+walk_10,overcast,435,Sign_03,Welcome Home,Welcome Home,True,True,0.0,1.63100004196167,48
+walk_10,overcast,435,Sign_04,OCTOBER,OCTOBER,True,True,0.0,1.1890000104904175,116
+walk_10,overcast,440,Sign_03,Welcome Home,Welcome Home,True,True,0.0,1.5010000467300415,53
+walk_10,overcast,440,Sign_04,OCTOBER,OCTOBEF,True,False,0.14285714285714285,1.0570000410079956,132
+walk_10,overcast,445,Sign_03,Welcome Home,Welcome Home,True,True,0.0,1.3569999933242798,62
+walk_10,overcast,445,Sign_04,OCTOBER,0,True,False,1.0,0.9169999957084656,150
+walk_10,overcast,450,Sign_03,Welcome Home,Velcome Home,True,False,0.09090909090909091,1.2070000171661377,72
