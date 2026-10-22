@@ -4,3 +4,5 @@ data/
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
+eval/results/depth/gt-noise*/
+eval/results/seg/gt-noise/
