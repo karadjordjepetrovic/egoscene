@@ -3,16 +3,20 @@
     "ceiling",
     "chair",
     "counter",
+    "door",
     "floor",
     "lamp",
+    "outdoor",
     "plant",
-    "screen",
     "shelf",
+    "sign",
     "sink",
     "sofa",
     "stove",
     "table",
-    "wall"
+    "tv",
+    "wall",
+    "window"
   ],
   "instances": {
     "1": {
@@ -78,52 +82,52 @@
     "13": {
       "class": "sofa",
       "actor": "SM_Sofa_01",
-      "mesh": "Cube"
+      "mesh": "SM_sofa_02"
     },
     "14": {
       "class": "table",
       "actor": "SM_CoffeeTable_01",
-      "mesh": "Cube"
+      "mesh": "SM_CoffeeTable_01_PH"
     },
     "15": {
       "class": "shelf",
       "actor": "SM_Shelf_01",
-      "mesh": "Cube"
+      "mesh": "SM_Shelf_01_PH"
     },
     "16": {
-      "class": "screen",
+      "class": "tv",
       "actor": "SM_TV_01",
-      "mesh": "Cube"
+      "mesh": "SM_Television_01"
     },
     "17": {
       "class": "lamp",
       "actor": "SM_Lamp_01",
-      "mesh": "Cylinder"
+      "mesh": "SM_pipe_lamp"
     },
     "18": {
       "class": "plant",
       "actor": "SM_Plant_01",
-      "mesh": "Cone"
+      "mesh": "SM_potted_plant_01"
     },
     "19": {
       "class": "plant",
       "actor": "SM_Plant_02",
-      "mesh": "Cone"
+      "mesh": "SM_potted_plant_02"
     },
     "20": {
       "class": "table",
       "actor": "SM_Table_01",
-      "mesh": "Cube"
+      "mesh": "SM_wooden_table_02"
     },
     "21": {
       "class": "chair",
       "actor": "SM_Chair_01",
-      "mesh": "Cube"
+      "mesh": "SM_dining_chair_02"
     },
     "22": {
       "class": "chair",
       "actor": "SM_Chair_02",
-      "mesh": "Cube"
+      "mesh": "SM_dining_chair_02"
     },
     "23": {
       "class": "counter",
@@ -131,13 +135,138 @@
       "mesh": "Cube"
     },
     "24": {
-      "class": "stove",
-      "actor": "SM_Stove_01",
+      "class": "counter",
+      "actor": "SM_Counter_01",
       "mesh": "Cube"
     },
     "25": {
+      "class": "counter",
+      "actor": "SM_Counter_01",
+      "mesh": "Cube"
+    },
+    "26": {
+      "class": "counter",
+      "actor": "SM_Counter_01",
+      "mesh": "Cube"
+    },
+    "27": {
+      "class": "counter",
+      "actor": "SM_Counter_01",
+      "mesh": "Cube"
+    },
+    "28": {
+      "class": "counter",
+      "actor": "SM_Counter_01",
+      "mesh": "Cube"
+    },
+    "29": {
+      "class": "stove",
+      "actor": "SM_Stove_01",
+      "mesh": "SM_electric_stove"
+    },
+    "30": {
       "class": "sink",
       "actor": "SM_Sink_01",
+      "mesh": "Cube"
+    },
+    "31": {
+      "class": "sink",
+      "actor": "SM_Sink_01",
+      "mesh": "Cube"
+    },
+    "32": {
+      "class": "sink",
+      "actor": "SM_Sink_01",
+      "mesh": "Cube"
+    },
+    "33": {
+      "class": "sink",
+      "actor": "SM_Sink_01",
+      "mesh": "Cube"
+    },
+    "34": {
+      "class": "sink",
+      "actor": "SM_Sink_01",
+      "mesh": "Cube"
+    },
+    "35": {
+      "class": "sink",
+      "actor": "SM_Sink_01",
+      "mesh": "Cylinder"
+    },
+    "36": {
+      "class": "sink",
+      "actor": "SM_Sink_01",
+      "mesh": "Cylinder"
+    },
+    "37": {
+      "class": "outdoor",
+      "actor": "Outdoor_Backdrop",
+      "mesh": "EnviroDome"
+    },
+    "38": {
+      "class": "window",
+      "actor": "Window_Glass_01",
+      "mesh": "Cube"
+    },
+    "39": {
+      "class": "floor",
+      "actor": "Hallway_Floor_01",
+      "mesh": "Cube"
+    },
+    "40": {
+      "class": "ceiling",
+      "actor": "Hallway_Ceiling_01",
+      "mesh": "Cube"
+    },
+    "41": {
+      "class": "wall",
+      "actor": "Hallway_Wall_W_01",
+      "mesh": "Cube"
+    },
+    "42": {
+      "class": "wall",
+      "actor": "Hallway_Wall_E_01",
+      "mesh": "Cube"
+    },
+    "43": {
+      "class": "wall",
+      "actor": "Hallway_Wall_Far_Lintel",
+      "mesh": "Cube"
+    },
+    "44": {
+      "class": "door",
+      "actor": "Hallway_Door_01",
+      "mesh": "Cube"
+    },
+    "45": {
+      "class": "plant",
+      "actor": "Plant_03",
+      "mesh": "SM_potted_plant_04"
+    },
+    "46": {
+      "class": "shelf",
+      "actor": "Shelf_02",
+      "mesh": "SM_steel_shelves_02"
+    },
+    "47": {
+      "class": "sign",
+      "actor": "Sign_01",
+      "mesh": "Cube"
+    },
+    "48": {
+      "class": "sign",
+      "actor": "Sign_02",
+      "mesh": "Cube"
+    },
+    "49": {
+      "class": "sign",
+      "actor": "Sign_03",
+      "mesh": "Cube"
+    },
+    "50": {
+      "class": "sign",
+      "actor": "Sign_04",
       "mesh": "Cube"
     }
   }

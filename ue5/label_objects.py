@@ -1,13 +1,17 @@
 import unreal, json, re
 
 # Class rules: first regex that matches the actor label or mesh name wins.
+# Target class list (append-only; existing entries keep their position so
+# instance numbering for unaffected actors doesn't reshuffle):
+# wall, floor, ceiling, door, window, table, chair, sofa, tv, counter,
+# stove, sink, shelf, plant, lamp, bed, sign, outdoor.
 CLASS_RULES = [
     ("chair",   r"chair|stool"),
     ("table",   r"table|desk"),
     ("sofa",    r"sofa|couch"),
-    ("door",    r"door"),
+    ("door",    r"(?<!out)door"),  # exclude "outdoor" so Outdoor_Backdrop falls through to the outdoor rule
     ("window",  r"window"),
-    ("screen",  r"tv|monitor|screen"),
+    ("tv",      r"tv|monitor|screen"),
     ("counter", r"counter|worktop"),
     ("stove",   r"stove|oven|hob"),
     ("sink",    r"sink"),
@@ -17,6 +21,10 @@ CLASS_RULES = [
     ("lamp",    r"lamp"),
     ("floor",   r"floor"),
     ("ceiling", r"ceiling"),
+    # --- appended for Task 3 ---
+    ("bed",     r"bed"),
+    ("sign",    r"sign"),
+    ("outdoor", r"outdoor"),
 ]
 
 actors = unreal.get_editor_subsystem(unreal.EditorActorSubsystem).get_all_level_actors()
@@ -36,6 +44,12 @@ for actor in actors:
         comp.set_editor_property("render_custom_depth", True)
         comp.set_editor_property("custom_depth_stencil_value", next_id)
         labels[next_id] = {"class": cls, "actor": actor.get_actor_label(), "mesh": mesh}
+        # Signs carry their readable text on a separate TextRenderComponent;
+        # give it the same stencil ID so the text isn't left out of the ID mask.
+        if cls == "sign":
+            for text_comp in actor.get_components_by_class(unreal.TextRenderComponent):
+                text_comp.set_editor_property("render_custom_depth", True)
+                text_comp.set_editor_property("custom_depth_stencil_value", next_id)
         next_id += 1
 
 out = unreal.Paths.project_saved_dir() + "egoscene_labels.json"
