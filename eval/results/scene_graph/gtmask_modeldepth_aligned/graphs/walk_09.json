@@ -1,0 +1,481 @@
+{
+ "walk_id": "walk_09",
+ "variant": "gtmask_modeldepth_aligned",
+ "objects": [
+  {
+   "id": 1,
+   "class": "sofa",
+   "centroid": [
+    0.635,
+    -2.354,
+    0.417
+   ],
+   "size": [
+    0.966,
+    1.811,
+    0.55
+   ],
+   "top_z": 0.692,
+   "surface": "horizontal",
+   "n_obs": 13,
+   "confidence": 0.987,
+   "last_seen": 8.5
+  },
+  {
+   "id": 2,
+   "class": "table",
+   "centroid": [
+    1.972,
+    -3.122,
+    0.192
+   ],
+   "size": [
+    1.198,
+    1.976,
+    0.37
+   ],
+   "top_z": 0.377,
+   "surface": "horizontal",
+   "n_obs": 6,
+   "confidence": 0.865,
+   "last_seen": 0.8
+  },
+  {
+   "id": 3,
+   "class": "plant",
+   "centroid": [
+    1.956,
+    -2.637,
+    0.352
+   ],
+   "size": [
+    0.281,
+    0.97,
+    0.424
+   ],
+   "top_z": 0.565,
+   "surface": "horizontal",
+   "n_obs": 8,
+   "confidence": 0.931,
+   "last_seen": 0.7
+  },
+  {
+   "id": 4,
+   "class": "sign",
+   "centroid": [
+    1.813,
+    -5.009,
+    1.903
+   ],
+   "size": [
+    0.39,
+    0.373,
+    0.162
+   ],
+   "top_z": 1.984,
+   "surface": "horizontal",
+   "n_obs": 13,
+   "confidence": 0.987,
+   "last_seen": 8.9
+  },
+  {
+   "id": 5,
+   "class": "sign",
+   "centroid": [
+    -0.331,
+    -1.396,
+    1.741
+   ],
+   "size": [
+    0.299,
+    0.362,
+    0.169
+   ],
+   "top_z": 1.825,
+   "surface": "horizontal",
+   "n_obs": 4,
+   "confidence": 0.736,
+   "last_seen": 0.4
+  },
+  {
+   "id": 7,
+   "class": "chair",
+   "centroid": [
+    4.87,
+    -7.101,
+    0.647
+   ],
+   "size": [
+    0.502,
+    0.595,
+    0.763
+   ],
+   "top_z": 1.029,
+   "surface": "horizontal",
+   "n_obs": 17,
+   "confidence": 0.997,
+   "last_seen": 9.8
+  },
+  {
+   "id": 8,
+   "class": "table",
+   "centroid": [
+    1.893,
+    -2.393,
+    0.366
+   ],
+   "size": [
+    1.043,
+    0.982,
+    0.433
+   ],
+   "top_z": 0.582,
+   "surface": "horizontal",
+   "n_obs": 7,
+   "confidence": 0.903,
+   "last_seen": 8.3
+  },
+  {
+   "id": 9,
+   "class": "chair",
+   "centroid": [
+    4.935,
+    -5.62,
+    0.597
+   ],
+   "size": [
+    0.819,
+    0.975,
+    1.038
+   ],
+   "top_z": 1.116,
+   "surface": "horizontal",
+   "n_obs": 15,
+   "confidence": 0.993,
+   "last_seen": 7.9
+  },
+  {
+   "id": 10,
+   "class": "shelf",
+   "centroid": [
+    5.655,
+    -5.394,
+    1.241
+   ],
+   "size": [
+    0.814,
+    0.858,
+    1.768
+   ],
+   "top_z": 2.125,
+   "surface": "horizontal",
+   "n_obs": 21,
+   "confidence": 0.999,
+   "last_seen": 7.9
+  },
+  {
+   "id": 11,
+   "class": "plant",
+   "centroid": [
+    5.546,
+    -3.073,
+    0.71
+   ],
+   "size": [
+    0.507,
+    0.683,
+    1.155
+   ],
+   "top_z": 1.288,
+   "surface": "horizontal",
+   "n_obs": 51,
+   "confidence": 1.0,
+   "last_seen": 7.7
+  },
+  {
+   "id": 12,
+   "class": "tv",
+   "centroid": [
+    5.522,
+    -1.939,
+    0.342
+   ],
+   "size": [
+    0.355,
+    0.595,
+    0.516
+   ],
+   "top_z": 0.6,
+   "surface": "horizontal",
+   "n_obs": 33,
+   "confidence": 1.0,
+   "last_seen": 3.8
+  },
+  {
+   "id": 13,
+   "class": "shelf",
+   "centroid": [
+    4.664,
+    -0.133,
+    1.171
+   ],
+   "size": [
+    0.988,
+    0.404,
+    1.814
+   ],
+   "top_z": 2.079,
+   "surface": "horizontal",
+   "n_obs": 23,
+   "confidence": 1.0,
+   "last_seen": 2.9
+  },
+  {
+   "id": 14,
+   "class": "plant",
+   "centroid": [
+    5.331,
+    -0.56,
+    0.494
+   ],
+   "size": [
+    0.632,
+    0.543,
+    0.74
+   ],
+   "top_z": 0.864,
+   "surface": "horizontal",
+   "n_obs": 29,
+   "confidence": 1.0,
+   "last_seen": 3.5
+  },
+  {
+   "id": 15,
+   "class": "lamp",
+   "centroid": [
+    4.946,
+    -0.144,
+    2.4
+   ],
+   "size": [
+    1.098,
+    0.201,
+    0.418
+   ],
+   "top_z": 2.609,
+   "surface": "horizontal",
+   "n_obs": 16,
+   "confidence": 0.995,
+   "last_seen": 2.3
+  },
+  {
+   "id": 17,
+   "class": "shelf",
+   "centroid": [
+    5.448,
+    -4.748,
+    1.218
+   ],
+   "size": [
+    0.472,
+    1.153,
+    1.649
+   ],
+   "top_z": 2.042,
+   "surface": "horizontal",
+   "n_obs": 17,
+   "confidence": 0.997,
+   "last_seen": 5.1
+  },
+  {
+   "id": 18,
+   "class": "table",
+   "centroid": [
+    4.791,
+    -5.75,
+    0.7
+   ],
+   "size": [
+    0.962,
+    1.613,
+    0.619
+   ],
+   "top_z": 1.009,
+   "surface": "horizontal",
+   "n_obs": 49,
+   "confidence": 1.0,
+   "last_seen": 9.5
+  },
+  {
+   "id": 19,
+   "class": "chair",
+   "centroid": [
+    4.822,
+    -4.953,
+    0.724
+   ],
+   "size": [
+    0.402,
+    0.779,
+    0.686
+   ],
+   "top_z": 1.067,
+   "surface": "horizontal",
+   "n_obs": 21,
+   "confidence": 0.999,
+   "last_seen": 6.6
+  },
+  {
+   "id": 20,
+   "class": "stove",
+   "centroid": [
+    3.183,
+    -6.58,
+    0.636
+   ],
+   "size": [
+    0.615,
+    1.198,
+    0.743
+   ],
+   "top_z": 1.008,
+   "surface": "horizontal",
+   "n_obs": 24,
+   "confidence": 1.0,
+   "last_seen": 6.3
+  },
+  {
+   "id": 21,
+   "class": "chair",
+   "centroid": [
+    4.786,
+    -6.503,
+    0.707
+   ],
+   "size": [
+    0.446,
+    0.821,
+    0.757
+   ],
+   "top_z": 1.085,
+   "surface": "horizontal",
+   "n_obs": 25,
+   "confidence": 1.0,
+   "last_seen": 9.3
+  },
+  {
+   "id": 22,
+   "class": "counter",
+   "centroid": [
+    1.83,
+    -7.348,
+    0.657
+   ],
+   "size": [
+    1.755,
+    0.708,
+    0.882
+   ],
+   "top_z": 1.098,
+   "surface": "horizontal",
+   "n_obs": 62,
+   "confidence": 1.0,
+   "last_seen": 11.9
+  },
+  {
+   "id": 23,
+   "class": "sign",
+   "centroid": [
+    2.17,
+    -4.65,
+    1.854
+   ],
+   "size": [
+    0.305,
+    0.331,
+    0.129
+   ],
+   "top_z": 1.918,
+   "surface": "horizontal",
+   "n_obs": 18,
+   "confidence": 0.998,
+   "last_seen": 6.3
+  },
+  {
+   "id": 24,
+   "class": "stove",
+   "centroid": [
+    3.037,
+    -7.363,
+    0.585
+   ],
+   "size": [
+    0.572,
+    0.673,
+    0.77
+   ],
+   "top_z": 0.971,
+   "surface": "horizontal",
+   "n_obs": 37,
+   "confidence": 1.0,
+   "last_seen": 11.2
+  },
+  {
+   "id": 26,
+   "class": "sink",
+   "centroid": [
+    1.623,
+    -7.533,
+    1.076
+   ],
+   "size": [
+    0.544,
+    0.43,
+    0.223
+   ],
+   "top_z": 1.188,
+   "surface": "horizontal",
+   "n_obs": 42,
+   "confidence": 1.0,
+   "last_seen": 12.1
+  },
+  {
+   "id": 27,
+   "class": "table",
+   "centroid": [
+    4.478,
+    -6.621,
+    0.82
+   ],
+   "size": [
+    0.318,
+    0.29,
+    0.114
+   ],
+   "top_z": 0.877,
+   "surface": "horizontal",
+   "n_obs": 3,
+   "confidence": 0.632,
+   "last_seen": 9.8
+  },
+  {
+   "id": 28,
+   "class": "counter",
+   "centroid": [
+    0.915,
+    -7.516,
+    0.996
+   ],
+   "size": [
+    0.919,
+    0.546,
+    0.382
+   ],
+   "top_z": 1.187,
+   "surface": "horizontal",
+   "n_obs": 7,
+   "confidence": 0.903,
+   "last_seen": 12.7
+  }
+ ]
+}

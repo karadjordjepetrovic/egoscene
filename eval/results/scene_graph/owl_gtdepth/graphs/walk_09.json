@@ -1,0 +1,348 @@
+{
+ "walk_id": "walk_09",
+ "variant": "owl_gtdepth",
+ "objects": [
+  {
+   "id": 1,
+   "class": "plant",
+   "centroid": [
+    1.841,
+    -2.033,
+    0.643
+   ],
+   "size": [
+    0.188,
+    0.228,
+    0.232
+   ],
+   "top_z": 0.759,
+   "surface": "horizontal",
+   "n_obs": 8,
+   "confidence": 0.434,
+   "last_seen": 0.7
+  },
+  {
+   "id": 2,
+   "class": "sofa",
+   "centroid": [
+    0.494,
+    -2.181,
+    0.458
+   ],
+   "size": [
+    0.886,
+    1.679,
+    0.911
+   ],
+   "top_z": 0.913,
+   "surface": "horizontal",
+   "n_obs": 9,
+   "confidence": 0.492,
+   "last_seen": 8.4
+  },
+  {
+   "id": 3,
+   "class": "table",
+   "centroid": [
+    1.817,
+    -1.943,
+    0.628
+   ],
+   "size": [
+    0.826,
+    0.76,
+    0.203
+   ],
+   "top_z": 0.73,
+   "surface": "horizontal",
+   "n_obs": 6,
+   "confidence": 0.22,
+   "last_seen": 0.6
+  },
+  {
+   "id": 4,
+   "class": "chair",
+   "centroid": [
+    4.68,
+    -6.496,
+    0.405
+   ],
+   "size": [
+    0.637,
+    0.903,
+    0.799
+   ],
+   "top_z": 0.805,
+   "surface": "horizontal",
+   "n_obs": 13,
+   "confidence": 0.395,
+   "last_seen": 6.6
+  },
+  {
+   "id": 5,
+   "class": "shelf",
+   "centroid": [
+    5.702,
+    -5.514,
+    1.064
+   ],
+   "size": [
+    0.506,
+    0.952,
+    2.123
+   ],
+   "top_z": 2.126,
+   "surface": "horizontal",
+   "n_obs": 46,
+   "confidence": 0.456,
+   "last_seen": 7.2
+  },
+  {
+   "id": 6,
+   "class": "table",
+   "centroid": [
+    4.73,
+    -6.077,
+    0.486
+   ],
+   "size": [
+    0.781,
+    1.29,
+    0.961
+   ],
+   "top_z": 0.966,
+   "surface": "horizontal",
+   "n_obs": 47,
+   "confidence": 0.392,
+   "last_seen": 9.8
+  },
+  {
+   "id": 7,
+   "class": "chair",
+   "centroid": [
+    4.904,
+    -5.688,
+    0.488
+   ],
+   "size": [
+    0.421,
+    0.514,
+    0.971
+   ],
+   "top_z": 0.973,
+   "surface": "horizontal",
+   "n_obs": 46,
+   "confidence": 0.379,
+   "last_seen": 7.9
+  },
+  {
+   "id": 8,
+   "class": "plant",
+   "centroid": [
+    5.694,
+    -3.333,
+    0.619
+   ],
+   "size": [
+    0.515,
+    0.759,
+    1.234
+   ],
+   "top_z": 1.236,
+   "surface": "horizontal",
+   "n_obs": 40,
+   "confidence": 0.467,
+   "last_seen": 4.3
+  },
+  {
+   "id": 9,
+   "class": "tv",
+   "centroid": [
+    5.635,
+    -1.986,
+    0.231
+   ],
+   "size": [
+    0.268,
+    0.577,
+    0.457
+   ],
+   "top_z": 0.46,
+   "surface": "horizontal",
+   "n_obs": 29,
+   "confidence": 0.678,
+   "last_seen": 3.4
+  },
+  {
+   "id": 11,
+   "class": "plant",
+   "centroid": [
+    5.419,
+    -0.513,
+    0.398
+   ],
+   "size": [
+    0.479,
+    0.542,
+    0.79
+   ],
+   "top_z": 0.793,
+   "surface": "horizontal",
+   "n_obs": 27,
+   "confidence": 0.493,
+   "last_seen": 3.3
+  },
+  {
+   "id": 12,
+   "class": "lamp",
+   "centroid": [
+    4.701,
+    -0.155,
+    2.351
+   ],
+   "size": [
+    0.353,
+    0.215,
+    0.27
+   ],
+   "top_z": 2.486,
+   "surface": "horizontal",
+   "n_obs": 20,
+   "confidence": 0.569,
+   "last_seen": 2.2
+  },
+  {
+   "id": 14,
+   "class": "shelf",
+   "centroid": [
+    4.198,
+    -0.171,
+    1.211
+   ],
+   "size": [
+    0.309,
+    0.245,
+    1.689
+   ],
+   "top_z": 2.056,
+   "surface": "horizontal",
+   "n_obs": 18,
+   "confidence": 0.504,
+   "last_seen": 2.8
+  },
+  {
+   "id": 16,
+   "class": "shelf",
+   "centroid": [
+    4.576,
+    -0.19,
+    1.352
+   ],
+   "size": [
+    0.93,
+    0.209,
+    1.381
+   ],
+   "top_z": 2.043,
+   "surface": "horizontal",
+   "n_obs": 20,
+   "confidence": 0.462,
+   "last_seen": 2.9
+  },
+  {
+   "id": 36,
+   "class": "stove",
+   "centroid": [
+    2.918,
+    -7.628,
+    0.432
+   ],
+   "size": [
+    0.493,
+    0.645,
+    0.859
+   ],
+   "top_z": 0.862,
+   "surface": "horizontal",
+   "n_obs": 105,
+   "confidence": 0.637,
+   "last_seen": 11.1
+  },
+  {
+   "id": 38,
+   "class": "chair",
+   "centroid": [
+    4.877,
+    -7.198,
+    0.799
+   ],
+   "size": [
+    0.369,
+    0.134,
+    0.348
+   ],
+   "top_z": 0.973,
+   "surface": "horizontal",
+   "n_obs": 15,
+   "confidence": 0.287,
+   "last_seen": 9.7
+  },
+  {
+   "id": 86,
+   "class": "sink",
+   "centroid": [
+    1.482,
+    -7.647,
+    0.954
+   ],
+   "size": [
+    0.692,
+    0.608,
+    0.086
+   ],
+   "top_z": 0.997,
+   "surface": "horizontal",
+   "n_obs": 42,
+   "confidence": 0.601,
+   "last_seen": 12.0
+  },
+  {
+   "id": 89,
+   "class": "counter",
+   "centroid": [
+    1.958,
+    -7.449,
+    0.606
+   ],
+   "size": [
+    1.643,
+    1.004,
+    1.208
+   ],
+   "top_z": 1.21,
+   "surface": "horizontal",
+   "n_obs": 42,
+   "confidence": 0.426,
+   "last_seen": 12.0
+  },
+  {
+   "id": 119,
+   "class": "shelf",
+   "centroid": [
+    0.88,
+    -7.641,
+    0.976
+   ],
+   "size": [
+    0.663,
+    0.62,
+    0.34
+   ],
+   "top_z": 1.146,
+   "surface": "horizontal",
+   "n_obs": 3,
+   "confidence": 0.197,
+   "last_seen": 12.3
+  }
+ ]
+}

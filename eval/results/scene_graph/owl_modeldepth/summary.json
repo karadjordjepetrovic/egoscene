@@ -1,0 +1,653 @@
+{
+ "variant": "owl_modeldepth",
+ "stride": 3,
+ "iou_thr": 0.25,
+ "overall": {
+  "recall": 0.5189873417721519,
+  "precision": 0.44808743169398907,
+  "gt_objects": 158,
+  "pred_objects": 183,
+  "duplicates": 19,
+  "false_positives": 82,
+  "mean_iou": 0.3592377293674898,
+  "centroid_err_cm": 19.896105400310823,
+  "size_err_cm": 22.083315278250144,
+  "recall_by_class": {
+   "tv": 0.7,
+   "plant": 0.7142857142857143,
+   "table": 0.65,
+   "chair": 0.4,
+   "shelf": 0.85,
+   "lamp": 0.0,
+   "sign": 0.0,
+   "stove": 0.75,
+   "counter": 0.5,
+   "sink": 0.0,
+   "sofa": 1.0
+  },
+  "graph_ms": {
+   "median": 5.217650003032759,
+   "p95": 10.85144499666057
+  },
+  "model_ms": {
+   "depth": 18.98788833618164,
+   "owlv2": 59.08803176879883
+  }
+ },
+ "per_walk": [
+  {
+   "gt_objects": 15,
+   "pred_objects": 15,
+   "matched": 7,
+   "duplicates": 1,
+   "false_positives": 7,
+   "recall": 0.4666666666666667,
+   "precision": 0.4666666666666667,
+   "per_class": {
+    "tv": [
+     0,
+     1
+    ],
+    "plant": [
+     2,
+     2
+    ],
+    "table": [
+     0,
+     2
+    ],
+    "chair": [
+     1,
+     2
+    ],
+    "shelf": [
+     2,
+     2
+    ],
+    "lamp": [
+     0,
+     1
+    ],
+    "sign": [
+     0,
+     2
+    ],
+    "stove": [
+     1,
+     1
+    ],
+    "counter": [
+     1,
+     1
+    ],
+    "sink": [
+     0,
+     1
+    ]
+   },
+   "missed": [
+    "SM_TV_01",
+    "SM_Table_01",
+    "SM_Chair_02",
+    "SM_Lamp_01",
+    "SM_CoffeeTable_01",
+    "Sign_04",
+    "Sign_02",
+    "SM_Sink_01"
+   ],
+   "walk_id": "walk_01",
+   "lighting": "day"
+  },
+  {
+   "gt_objects": 15,
+   "pred_objects": 13,
+   "matched": 8,
+   "duplicates": 2,
+   "false_positives": 3,
+   "recall": 0.5333333333333333,
+   "precision": 0.6153846153846154,
+   "per_class": {
+    "shelf": [
+     1,
+     2
+    ],
+    "tv": [
+     1,
+     1
+    ],
+    "lamp": [
+     0,
+     1
+    ],
+    "plant": [
+     2,
+     3
+    ],
+    "chair": [
+     1,
+     2
+    ],
+    "table": [
+     2,
+     2
+    ],
+    "sign": [
+     0,
+     3
+    ],
+    "sofa": [
+     1,
+     1
+    ]
+   },
+   "missed": [
+    "SM_Lamp_01",
+    "Shelf_02",
+    "SM_Chair_02",
+    "Sign_02",
+    "Plant_03",
+    "Sign_03",
+    "Sign_04"
+   ],
+   "walk_id": "walk_02",
+   "lighting": "overcast"
+  },
+  {
+   "gt_objects": 18,
+   "pred_objects": 22,
+   "matched": 9,
+   "duplicates": 2,
+   "false_positives": 11,
+   "recall": 0.5,
+   "precision": 0.4090909090909091,
+   "per_class": {
+    "sofa": [
+     1,
+     1
+    ],
+    "table": [
+     2,
+     2
+    ],
+    "plant": [
+     2,
+     3
+    ],
+    "sign": [
+     0,
+     3
+    ],
+    "chair": [
+     0,
+     2
+    ],
+    "shelf": [
+     2,
+     2
+    ],
+    "tv": [
+     1,
+     1
+    ],
+    "lamp": [
+     0,
+     1
+    ],
+    "stove": [
+     1,
+     1
+    ],
+    "counter": [
+     0,
+     1
+    ],
+    "sink": [
+     0,
+     1
+    ]
+   },
+   "missed": [
+    "Plant_03",
+    "Sign_04",
+    "SM_Chair_02",
+    "SM_Chair_01",
+    "Sign_02",
+    "Sign_03",
+    "SM_Lamp_01",
+    "SM_Counter_01",
+    "SM_Sink_01"
+   ],
+   "walk_id": "walk_03",
+   "lighting": "evening"
+  },
+  {
+   "gt_objects": 13,
+   "pred_objects": 24,
+   "matched": 9,
+   "duplicates": 3,
+   "false_positives": 12,
+   "recall": 0.6923076923076923,
+   "precision": 0.375,
+   "per_class": {
+    "table": [
+     1,
+     2
+    ],
+    "chair": [
+     2,
+     2
+    ],
+    "shelf": [
+     1,
+     2
+    ],
+    "sign": [
+     0,
+     1
+    ],
+    "stove": [
+     1,
+     1
+    ],
+    "counter": [
+     1,
+     1
+    ],
+    "sink": [
+     0,
+     1
+    ],
+    "plant": [
+     2,
+     2
+    ],
+    "tv": [
+     1,
+     1
+    ]
+   },
+   "missed": [
+    "SM_CoffeeTable_01",
+    "Sign_02",
+    "SM_Sink_01",
+    "SM_Shelf_01"
+   ],
+   "walk_id": "walk_04",
+   "lighting": "night"
+  },
+  {
+   "gt_objects": 16,
+   "pred_objects": 13,
+   "matched": 8,
+   "duplicates": 1,
+   "false_positives": 4,
+   "recall": 0.5,
+   "precision": 0.6153846153846154,
+   "per_class": {
+    "shelf": [
+     2,
+     2
+    ],
+    "tv": [
+     0,
+     1
+    ],
+    "lamp": [
+     0,
+     1
+    ],
+    "plant": [
+     2,
+     3
+    ],
+    "table": [
+     2,
+     2
+    ],
+    "chair": [
+     1,
+     2
+    ],
+    "sign": [
+     0,
+     3
+    ],
+    "sofa": [
+     1,
+     1
+    ],
+    "stove": [
+     0,
+     1
+    ]
+   },
+   "missed": [
+    "SM_TV_01",
+    "SM_Lamp_01",
+    "SM_Chair_02",
+    "Sign_02",
+    "Plant_03",
+    "Sign_03",
+    "SM_Stove_01",
+    "Sign_04"
+   ],
+   "walk_id": "walk_05",
+   "lighting": "day"
+  },
+  {
+   "gt_objects": 16,
+   "pred_objects": 23,
+   "matched": 12,
+   "duplicates": 6,
+   "false_positives": 5,
+   "recall": 0.75,
+   "precision": 0.5217391304347826,
+   "per_class": {
+    "sofa": [
+     1,
+     1
+    ],
+    "table": [
+     2,
+     2
+    ],
+    "chair": [
+     2,
+     2
+    ],
+    "plant": [
+     2,
+     3
+    ],
+    "shelf": [
+     2,
+     2
+    ],
+    "sign": [
+     0,
+     1
+    ],
+    "tv": [
+     1,
+     1
+    ],
+    "lamp": [
+     0,
+     1
+    ],
+    "stove": [
+     1,
+     1
+    ],
+    "counter": [
+     1,
+     1
+    ],
+    "sink": [
+     0,
+     1
+    ]
+   },
+   "missed": [
+    "Plant_03",
+    "Sign_02",
+    "SM_Lamp_01",
+    "SM_Sink_01"
+   ],
+   "walk_id": "walk_06",
+   "lighting": "overcast"
+  },
+  {
+   "gt_objects": 16,
+   "pred_objects": 17,
+   "matched": 6,
+   "duplicates": 0,
+   "false_positives": 11,
+   "recall": 0.375,
+   "precision": 0.35294117647058826,
+   "per_class": {
+    "table": [
+     1,
+     2
+    ],
+    "shelf": [
+     1,
+     2
+    ],
+    "tv": [
+     1,
+     1
+    ],
+    "lamp": [
+     0,
+     1
+    ],
+    "plant": [
+     2,
+     3
+    ],
+    "chair": [
+     0,
+     2
+    ],
+    "sign": [
+     0,
+     3
+    ],
+    "sofa": [
+     1,
+     1
+    ],
+    "stove": [
+     0,
+     1
+    ]
+   },
+   "missed": [
+    "SM_Shelf_01",
+    "SM_Lamp_01",
+    "SM_Table_01",
+    "SM_Chair_01",
+    "SM_Chair_02",
+    "Plant_03",
+    "Sign_02",
+    "Sign_03",
+    "SM_Stove_01",
+    "Sign_04"
+   ],
+   "walk_id": "walk_07",
+   "lighting": "evening"
+  },
+  {
+   "gt_objects": 17,
+   "pred_objects": 18,
+   "matched": 7,
+   "duplicates": 1,
+   "false_positives": 10,
+   "recall": 0.4117647058823529,
+   "precision": 0.3888888888888889,
+   "per_class": {
+    "sofa": [
+     1,
+     1
+    ],
+    "table": [
+     1,
+     2
+    ],
+    "plant": [
+     2,
+     3
+    ],
+    "sign": [
+     0,
+     2
+    ],
+    "chair": [
+     0,
+     2
+    ],
+    "shelf": [
+     2,
+     2
+    ],
+    "tv": [
+     0,
+     1
+    ],
+    "lamp": [
+     0,
+     1
+    ],
+    "stove": [
+     1,
+     1
+    ],
+    "counter": [
+     0,
+     1
+    ],
+    "sink": [
+     0,
+     1
+    ]
+   },
+   "missed": [
+    "SM_CoffeeTable_01",
+    "Plant_03",
+    "Sign_04",
+    "Sign_02",
+    "SM_Chair_02",
+    "SM_Chair_01",
+    "SM_TV_01",
+    "SM_Lamp_01",
+    "SM_Counter_01",
+    "SM_Sink_01"
+   ],
+   "walk_id": "walk_08",
+   "lighting": "night"
+  },
+  {
+   "gt_objects": 17,
+   "pred_objects": 21,
+   "matched": 9,
+   "duplicates": 1,
+   "false_positives": 11,
+   "recall": 0.5294117647058824,
+   "precision": 0.42857142857142855,
+   "per_class": {
+    "sofa": [
+     1,
+     1
+    ],
+    "table": [
+     1,
+     2
+    ],
+    "plant": [
+     2,
+     3
+    ],
+    "sign": [
+     0,
+     2
+    ],
+    "chair": [
+     1,
+     2
+    ],
+    "shelf": [
+     2,
+     2
+    ],
+    "tv": [
+     1,
+     1
+    ],
+    "lamp": [
+     0,
+     1
+    ],
+    "stove": [
+     1,
+     1
+    ],
+    "counter": [
+     0,
+     1
+    ],
+    "sink": [
+     0,
+     1
+    ]
+   },
+   "missed": [
+    "SM_CoffeeTable_01",
+    "Plant_03",
+    "Sign_02",
+    "Sign_03",
+    "SM_Chair_01",
+    "SM_Lamp_01",
+    "SM_Counter_01",
+    "SM_Sink_01"
+   ],
+   "walk_id": "walk_09",
+   "lighting": "day"
+  },
+  {
+   "gt_objects": 15,
+   "pred_objects": 17,
+   "matched": 7,
+   "duplicates": 2,
+   "false_positives": 8,
+   "recall": 0.4666666666666667,
+   "precision": 0.4117647058823529,
+   "per_class": {
+    "sofa": [
+     1,
+     1
+    ],
+    "table": [
+     1,
+     2
+    ],
+    "plant": [
+     2,
+     3
+    ],
+    "sign": [
+     0,
+     3
+    ],
+    "chair": [
+     0,
+     2
+    ],
+    "shelf": [
+     2,
+     2
+    ],
+    "tv": [
+     1,
+     1
+    ],
+    "lamp": [
+     0,
+     1
+    ]
+   },
+   "missed": [
+    "Plant_03",
+    "Sign_04",
+    "SM_Table_01",
+    "Sign_02",
+    "SM_Chair_02",
+    "SM_Chair_01",
+    "Sign_03",
+    "SM_Lamp_01"
+   ],
+   "walk_id": "walk_10",
+   "lighting": "overcast"
+  }
+ ]
+}

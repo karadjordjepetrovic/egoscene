@@ -1,0 +1,538 @@
+{
+ "walk_id": "walk_03",
+ "variant": "owl_modeldepth_aligned",
+ "objects": [
+  {
+   "id": 1,
+   "class": "plant",
+   "centroid": [
+    1.971,
+    -2.75,
+    0.333
+   ],
+   "size": [
+    0.271,
+    0.674,
+    0.286
+   ],
+   "top_z": 0.476,
+   "surface": "horizontal",
+   "n_obs": 5,
+   "confidence": 0.363,
+   "last_seen": 2.2
+  },
+  {
+   "id": 2,
+   "class": "table",
+   "centroid": [
+    1.858,
+    -2.183,
+    0.264
+   ],
+   "size": [
+    0.925,
+    1.261,
+    0.563
+   ],
+   "top_z": 0.545,
+   "surface": "horizontal",
+   "n_obs": 5,
+   "confidence": 0.224,
+   "last_seen": 2.1
+  },
+  {
+   "id": 3,
+   "class": "sofa",
+   "centroid": [
+    0.617,
+    -2.221,
+    0.225
+   ],
+   "size": [
+    0.681,
+    0.87,
+    0.872
+   ],
+   "top_z": 0.661,
+   "surface": "horizontal",
+   "n_obs": 3,
+   "confidence": 0.321,
+   "last_seen": 2.0
+  },
+  {
+   "id": 4,
+   "class": "plant",
+   "centroid": [
+    1.989,
+    -2.275,
+    0.549
+   ],
+   "size": [
+    0.438,
+    0.631,
+    0.311
+   ],
+   "top_z": 0.704,
+   "surface": "horizontal",
+   "n_obs": 19,
+   "confidence": 0.46,
+   "last_seen": 7.9
+  },
+  {
+   "id": 5,
+   "class": "table",
+   "centroid": [
+    1.822,
+    -1.415,
+    0.286
+   ],
+   "size": [
+    0.878,
+    1.009,
+    0.616
+   ],
+   "top_z": 0.594,
+   "surface": "horizontal",
+   "n_obs": 11,
+   "confidence": 0.294,
+   "last_seen": 2.0
+  },
+  {
+   "id": 6,
+   "class": "sofa",
+   "centroid": [
+    0.694,
+    -1.47,
+    0.369
+   ],
+   "size": [
+    0.806,
+    0.741,
+    0.699
+   ],
+   "top_z": 0.718,
+   "surface": "horizontal",
+   "n_obs": 18,
+   "confidence": 0.505,
+   "last_seen": 1.9
+  },
+  {
+   "id": 7,
+   "class": "chair",
+   "centroid": [
+    4.444,
+    -5.527,
+    0.741
+   ],
+   "size": [
+    0.448,
+    1.011,
+    0.5
+   ],
+   "top_z": 0.991,
+   "surface": "horizontal",
+   "n_obs": 23,
+   "confidence": 0.555,
+   "last_seen": 6.3
+  },
+  {
+   "id": 8,
+   "class": "chair",
+   "centroid": [
+    4.49,
+    -6.235,
+    0.559
+   ],
+   "size": [
+    0.668,
+    1.384,
+    0.931
+   ],
+   "top_z": 1.025,
+   "surface": "horizontal",
+   "n_obs": 14,
+   "confidence": 0.512,
+   "last_seen": 6.4
+  },
+  {
+   "id": 9,
+   "class": "table",
+   "centroid": [
+    4.666,
+    -5.764,
+    0.545
+   ],
+   "size": [
+    0.871,
+    1.743,
+    0.976
+   ],
+   "top_z": 1.034,
+   "surface": "horizontal",
+   "n_obs": 38,
+   "confidence": 0.473,
+   "last_seen": 7.7
+  },
+  {
+   "id": 10,
+   "class": "chair",
+   "centroid": [
+    4.799,
+    -5.358,
+    0.543
+   ],
+   "size": [
+    0.642,
+    1.065,
+    0.989
+   ],
+   "top_z": 1.037,
+   "surface": "horizontal",
+   "n_obs": 38,
+   "confidence": 0.497,
+   "last_seen": 6.4
+  },
+  {
+   "id": 11,
+   "class": "shelf",
+   "centroid": [
+    5.454,
+    -5.191,
+    1.129
+   ],
+   "size": [
+    0.68,
+    1.346,
+    1.892
+   ],
+   "top_z": 2.075,
+   "surface": "horizontal",
+   "n_obs": 87,
+   "confidence": 0.52,
+   "last_seen": 7.6
+  },
+  {
+   "id": 14,
+   "class": "plant",
+   "centroid": [
+    5.61,
+    -3.176,
+    0.709
+   ],
+   "size": [
+    0.625,
+    0.813,
+    1.17
+   ],
+   "top_z": 1.294,
+   "surface": "horizontal",
+   "n_obs": 27,
+   "confidence": 0.48,
+   "last_seen": 6.9
+  },
+  {
+   "id": 15,
+   "class": "tv",
+   "centroid": [
+    5.543,
+    -2.172,
+    0.375
+   ],
+   "size": [
+    0.403,
+    1.071,
+    0.578
+   ],
+   "top_z": 0.664,
+   "surface": "horizontal",
+   "n_obs": 27,
+   "confidence": 0.716,
+   "last_seen": 7.1
+  },
+  {
+   "id": 16,
+   "class": "plant",
+   "centroid": [
+    5.189,
+    -0.548,
+    0.488
+   ],
+   "size": [
+    0.555,
+    0.528,
+    0.78
+   ],
+   "top_z": 0.878,
+   "surface": "horizontal",
+   "n_obs": 18,
+   "confidence": 0.444,
+   "last_seen": 3.8
+  },
+  {
+   "id": 17,
+   "class": "lamp",
+   "centroid": [
+    4.747,
+    -0.142,
+    2.348
+   ],
+   "size": [
+    1.03,
+    0.255,
+    0.34
+   ],
+   "top_z": 2.518,
+   "surface": "horizontal",
+   "n_obs": 18,
+   "confidence": 0.484,
+   "last_seen": 3.0
+  },
+  {
+   "id": 24,
+   "class": "shelf",
+   "centroid": [
+    4.328,
+    -0.071,
+    1.175
+   ],
+   "size": [
+    0.721,
+    0.41,
+    1.837
+   ],
+   "top_z": 2.093,
+   "surface": "horizontal",
+   "n_obs": 14,
+   "confidence": 0.466,
+   "last_seen": 3.7
+  },
+  {
+   "id": 47,
+   "class": "shelf",
+   "centroid": [
+    4.721,
+    -0.143,
+    1.34
+   ],
+   "size": [
+    0.893,
+    0.366,
+    1.484
+   ],
+   "top_z": 2.082,
+   "surface": "horizontal",
+   "n_obs": 20,
+   "confidence": 0.469,
+   "last_seen": 3.8
+  },
+  {
+   "id": 48,
+   "class": "tv",
+   "centroid": [
+    5.804,
+    -3.586,
+    1.529
+   ],
+   "size": [
+    0.502,
+    1.555,
+    1.093
+   ],
+   "top_z": 2.075,
+   "surface": "horizontal",
+   "n_obs": 5,
+   "confidence": 0.267,
+   "last_seen": 4.2
+  },
+  {
+   "id": 50,
+   "class": "table",
+   "centroid": [
+    5.127,
+    -2.157,
+    0.191
+   ],
+   "size": [
+    0.939,
+    2.577,
+    0.242
+   ],
+   "top_z": 0.313,
+   "surface": "horizontal",
+   "n_obs": 5,
+   "confidence": 0.205,
+   "last_seen": 3.6
+  },
+  {
+   "id": 89,
+   "class": "stove",
+   "centroid": [
+    3.219,
+    -7.138,
+    0.603
+   ],
+   "size": [
+    0.751,
+    0.921,
+    0.77
+   ],
+   "top_z": 0.988,
+   "surface": "horizontal",
+   "n_obs": 42,
+   "confidence": 0.6,
+   "last_seen": 9.6
+  },
+  {
+   "id": 98,
+   "class": "plant",
+   "centroid": [
+    5.463,
+    -1.518,
+    0.596
+   ],
+   "size": [
+    0.457,
+    1.224,
+    0.739
+   ],
+   "top_z": 0.965,
+   "surface": "horizontal",
+   "n_obs": 6,
+   "confidence": 0.32,
+   "last_seen": 7.3
+  },
+  {
+   "id": 102,
+   "class": "table",
+   "centroid": [
+    5.115,
+    -5.308,
+    1.026
+   ],
+   "size": [
+    0.621,
+    0.848,
+    0.335
+   ],
+   "top_z": 1.193,
+   "surface": "horizontal",
+   "n_obs": 3,
+   "confidence": 0.246,
+   "last_seen": 7.7
+  },
+  {
+   "id": 106,
+   "class": "sink",
+   "centroid": [
+    1.783,
+    -7.411,
+    0.998
+   ],
+   "size": [
+    0.652,
+    0.845,
+    0.132
+   ],
+   "top_z": 1.064,
+   "surface": "horizontal",
+   "n_obs": 27,
+   "confidence": 0.67,
+   "last_seen": 10.4
+  },
+  {
+   "id": 107,
+   "class": "sofa",
+   "centroid": [
+    1.867,
+    -2.5,
+    0.553
+   ],
+   "size": [
+    1.063,
+    0.9,
+    0.314
+   ],
+   "top_z": 0.71,
+   "surface": "horizontal",
+   "n_obs": 5,
+   "confidence": 0.428,
+   "last_seen": 8.2
+  },
+  {
+   "id": 109,
+   "class": "counter",
+   "centroid": [
+    2.512,
+    -7.017,
+    0.637
+   ],
+   "size": [
+    1.033,
+    1.38,
+    0.861
+   ],
+   "top_z": 1.067,
+   "surface": "horizontal",
+   "n_obs": 23,
+   "confidence": 0.325,
+   "last_seen": 10.0
+  },
+  {
+   "id": 110,
+   "class": "table",
+   "centroid": [
+    2.584,
+    -2.816,
+    0.473
+   ],
+   "size": [
+    0.609,
+    0.819,
+    0.427
+   ],
+   "top_z": 0.687,
+   "surface": "horizontal",
+   "n_obs": 4,
+   "confidence": 0.157,
+   "last_seen": 8.1
+  },
+  {
+   "id": 127,
+   "class": "stove",
+   "centroid": [
+    2.868,
+    -7.591,
+    0.775
+   ],
+   "size": [
+    0.639,
+    0.719,
+    0.305
+   ],
+   "top_z": 0.927,
+   "surface": "horizontal",
+   "n_obs": 6,
+   "confidence": 0.571,
+   "last_seen": 10.0
+  },
+  {
+   "id": 128,
+   "class": "counter",
+   "centroid": [
+    2.212,
+    -7.691,
+    0.994
+   ],
+   "size": [
+    0.704,
+    0.883,
+    0.473
+   ],
+   "top_z": 1.231,
+   "surface": "horizontal",
+   "n_obs": 4,
+   "confidence": 0.295,
+   "last_seen": 10.4
+  }
+ ]
+}

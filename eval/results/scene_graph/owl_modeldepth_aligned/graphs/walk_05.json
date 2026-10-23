@@ -1,0 +1,291 @@
+{
+ "walk_id": "walk_05",
+ "variant": "owl_modeldepth_aligned",
+ "objects": [
+  {
+   "id": 1,
+   "class": "lamp",
+   "centroid": [
+    4.664,
+    -0.143,
+    2.301
+   ],
+   "size": [
+    0.56,
+    0.336,
+    0.407
+   ],
+   "top_z": 2.505,
+   "surface": "horizontal",
+   "n_obs": 24,
+   "confidence": 0.538,
+   "last_seen": 7.1
+  },
+  {
+   "id": 2,
+   "class": "plant",
+   "centroid": [
+    5.562,
+    -3.183,
+    0.723
+   ],
+   "size": [
+    0.533,
+    0.802,
+    1.158
+   ],
+   "top_z": 1.302,
+   "surface": "horizontal",
+   "n_obs": 30,
+   "confidence": 0.463,
+   "last_seen": 3.8
+  },
+  {
+   "id": 3,
+   "class": "tv",
+   "centroid": [
+    5.796,
+    -1.906,
+    0.339
+   ],
+   "size": [
+    1.034,
+    0.619,
+    0.449
+   ],
+   "top_z": 0.563,
+   "surface": "horizontal",
+   "n_obs": 25,
+   "confidence": 0.672,
+   "last_seen": 6.6
+  },
+  {
+   "id": 4,
+   "class": "plant",
+   "centroid": [
+    5.296,
+    -0.702,
+    0.528
+   ],
+   "size": [
+    0.804,
+    0.81,
+    0.898
+   ],
+   "top_z": 0.976,
+   "surface": "horizontal",
+   "n_obs": 37,
+   "confidence": 0.53,
+   "last_seen": 7.1
+  },
+  {
+   "id": 7,
+   "class": "shelf",
+   "centroid": [
+    4.604,
+    -0.322,
+    1.203
+   ],
+   "size": [
+    1.002,
+    0.611,
+    1.736
+   ],
+   "top_z": 2.071,
+   "surface": "horizontal",
+   "n_obs": 90,
+   "confidence": 0.484,
+   "last_seen": 7.2
+  },
+  {
+   "id": 20,
+   "class": "shelf",
+   "centroid": [
+    5.363,
+    -4.755,
+    1.119
+   ],
+   "size": [
+    0.515,
+    0.932,
+    1.844
+   ],
+   "top_z": 2.041,
+   "surface": "horizontal",
+   "n_obs": 4,
+   "confidence": 0.281,
+   "last_seen": 1.8
+  },
+  {
+   "id": 21,
+   "class": "chair",
+   "centroid": [
+    4.487,
+    -5.45,
+    0.706
+   ],
+   "size": [
+    0.494,
+    1.368,
+    0.594
+   ],
+   "top_z": 1.003,
+   "surface": "horizontal",
+   "n_obs": 4,
+   "confidence": 0.302,
+   "last_seen": 2.7
+  },
+  {
+   "id": 22,
+   "class": "table",
+   "centroid": [
+    4.618,
+    -5.17,
+    0.68
+   ],
+   "size": [
+    0.781,
+    1.117,
+    0.738
+   ],
+   "top_z": 1.049,
+   "surface": "horizontal",
+   "n_obs": 4,
+   "confidence": 0.291,
+   "last_seen": 2.7
+  },
+  {
+   "id": 23,
+   "class": "chair",
+   "centroid": [
+    4.63,
+    -4.945,
+    0.634
+   ],
+   "size": [
+    0.544,
+    0.681,
+    0.841
+   ],
+   "top_z": 1.054,
+   "surface": "horizontal",
+   "n_obs": 3,
+   "confidence": 0.221,
+   "last_seen": 2.7
+  },
+  {
+   "id": 25,
+   "class": "sofa",
+   "centroid": [
+    1.323,
+    -2.024,
+    0.622
+   ],
+   "size": [
+    1.555,
+    1.428,
+    0.368
+   ],
+   "top_z": 0.806,
+   "surface": "horizontal",
+   "n_obs": 25,
+   "confidence": 0.625,
+   "last_seen": 8.3
+  },
+  {
+   "id": 26,
+   "class": "plant",
+   "centroid": [
+    1.91,
+    -1.979,
+    0.697
+   ],
+   "size": [
+    0.567,
+    0.217,
+    0.177
+   ],
+   "top_z": 0.786,
+   "surface": "horizontal",
+   "n_obs": 12,
+   "confidence": 0.423,
+   "last_seen": 6.3
+  },
+  {
+   "id": 50,
+   "class": "sofa",
+   "centroid": [
+    1.77,
+    -1.925,
+    0.719
+   ],
+   "size": [
+    1.299,
+    1.312,
+    0.487
+   ],
+   "top_z": 0.962,
+   "surface": "horizontal",
+   "n_obs": 7,
+   "confidence": 0.452,
+   "last_seen": 6.0
+  },
+  {
+   "id": 51,
+   "class": "plant",
+   "centroid": [
+    2.297,
+    -1.823,
+    0.797
+   ],
+   "size": [
+    0.551,
+    0.304,
+    0.141
+   ],
+   "top_z": 0.867,
+   "surface": "horizontal",
+   "n_obs": 5,
+   "confidence": 0.278,
+   "last_seen": 5.4
+  },
+  {
+   "id": 52,
+   "class": "table",
+   "centroid": [
+    2.422,
+    -1.877,
+    0.526
+   ],
+   "size": [
+    1.2,
+    1.32,
+    0.478
+   ],
+   "top_z": 0.766,
+   "surface": "horizontal",
+   "n_obs": 11,
+   "confidence": 0.23,
+   "last_seen": 6.1
+  },
+  {
+   "id": 63,
+   "class": "sofa",
+   "centroid": [
+    0.829,
+    -1.448,
+    0.824
+   ],
+   "size": [
+    0.397,
+    0.524,
+    0.159
+   ],
+   "top_z": 0.904,
+   "surface": "horizontal",
+   "n_obs": 3,
+   "confidence": 0.258,
+   "last_seen": 8.6
+  }
+ ]
+}

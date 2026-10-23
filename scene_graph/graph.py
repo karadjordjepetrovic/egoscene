@@ -201,3 +201,72 @@ class SceneGraph:
 
     def snapshot(self, min_obs=1):
         return [o.to_dict() for o in self.objects if o.n_obs >= min_obs]
+
+def mask_from_box(box, depth, inner=0.5, front_pct=10, near=0.3, far_min=0.3, far_rel=0.15):
+    """Turn a 2D detection box into an object mask using depth: keep the box pixels whose depth is
+    close to the object's front surface (estimated from the box centre), dropping the wall behind it.
+    box: [x0, y0, x1, y1] in pixels; depth: (H, W) metres."""
+    H, W = depth.shape
+    x0, y0, x1, y1 = [int(round(v)) for v in box]
+    x0, y0, x1, y1 = max(x0, 0), max(y0, 0), min(x1, W), min(y1, H)
+    m = np.zeros((H, W), bool)
+    if x1 - x0 < 2 or y1 - y0 < 2:
+        return m
+    cx0 = int(x0 + (x1 - x0) * (1 - inner) / 2); cx1 = int(x1 - (x1 - x0) * (1 - inner) / 2)
+    cy0 = int(y0 + (y1 - y0) * (1 - inner) / 2); cy1 = int(y1 - (y1 - y0) * (1 - inner) / 2)
+    c = depth[cy0:cy1 + 1, cx0:cx1 + 1]
+    c = c[c > 0]
+    if len(c) == 0:
+        return m
+    z_ref = np.percentile(c, front_pct)
+    d = depth[y0:y1, x0:x1]
+    m[y0:y1, x0:x1] = (d > 0) & (d > z_ref - near) & (d < z_ref + max(far_min, far_rel * z_ref))
+    return m
+
+
+class ScaleAligner:
+    """Temporal scale alignment for monocular metric depth (no ground truth needed, only camera poses).
+
+    Each new depth map is rescaled so that it agrees with the previous (aligned) depth map where the
+    two views overlap, then pulled gently back towards scale 1 (the FOV-corrected prior) so chained
+    estimates don't drift:   log s_t = (1 - prior_weight) * log s_chain + prior_weight * 0
+    """
+
+    def __init__(self, prior_weight=0.1, stride=8, max_rel=0.25):
+        self.prior_weight, self.stride, self.max_rel = prior_weight, stride, max_rel
+        self.prev = None           # (aligned depth, c2w)
+        self.scales = []
+
+    def __call__(self, depth, K, c2w):
+        s = 1.0
+        if self.prev is not None:
+            pd, pc2w = self.prev
+            st = self.stride
+            v, u = np.mgrid[0:pd.shape[0]:st, 0:pd.shape[1]:st]
+            v, u = v.ravel(), u.ravel()
+            z = pd[v, u]
+            ok = z > 0
+            v, u, z = v[ok], u[ok], z[ok]
+            P = np.stack([(u - K[0, 2]) / K[0, 0] * z, (v - K[1, 2]) / K[1, 1] * z, z, np.ones_like(z)])
+            Q = np.linalg.inv(c2w) @ pc2w @ P
+            zj = Q[2]
+            front = zj > 0.1
+            uj = np.round(Q[0][front] / zj[front] * K[0, 0] + K[0, 2]).astype(int)
+            vj = np.round(Q[1][front] / zj[front] * K[1, 1] + K[1, 2]).astype(int)
+            zj = zj[front]
+            H, W = depth.shape
+            inb = (uj >= 0) & (uj < W) & (vj >= 0) & (vj < H)
+            cur = depth[vj[inb], uj[inb]]
+            zj = zj[inb]
+            good = cur > 0
+            if good.sum() > 200:
+                r = zj[good] / cur[good]
+                med = np.median(r)
+                r = r[np.abs(r / med - 1) < self.max_rel]          # drop occlusions / disocclusions
+                if len(r) > 100:
+                    s_chain = float(np.median(r))
+                    s = float(np.exp((1 - self.prior_weight) * np.log(s_chain)))
+        aligned = depth * s
+        self.prev = (aligned, c2w)
+        self.scales.append(s)
+        return aligned
