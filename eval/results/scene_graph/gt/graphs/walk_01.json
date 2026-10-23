@@ -1,0 +1,290 @@
+{
+ "walk_id": "walk_01",
+ "objects": [
+  {
+   "id": 1,
+   "class": "tv",
+   "centroid": [
+    5.679,
+    -2.007,
+    0.248
+   ],
+   "size": [
+    0.345,
+    0.583,
+    0.421
+   ],
+   "top_z": 0.459,
+   "surface": "horizontal",
+   "n_obs": 21,
+   "confidence": 0.999,
+   "last_seen": 4.0
+  },
+  {
+   "id": 2,
+   "class": "plant",
+   "centroid": [
+    5.66,
+    -3.185,
+    0.644
+   ],
+   "size": [
+    0.481,
+    0.434,
+    1.209
+   ],
+   "top_z": 1.248,
+   "surface": "horizontal",
+   "n_obs": 28,
+   "confidence": 1.0,
+   "last_seen": 4.4
+  },
+  {
+   "id": 3,
+   "class": "table",
+   "centroid": [
+    4.882,
+    -6.384,
+    0.454
+   ],
+   "size": [
+    1.094,
+    0.678,
+    0.697
+   ],
+   "top_z": 0.802,
+   "surface": "horizontal",
+   "n_obs": 50,
+   "confidence": 1.0,
+   "last_seen": 7.6
+  },
+  {
+   "id": 4,
+   "class": "chair",
+   "centroid": [
+    4.888,
+    -5.689,
+    0.519
+   ],
+   "size": [
+    0.394,
+    0.517,
+    0.91
+   ],
+   "top_z": 0.974,
+   "surface": "horizontal",
+   "n_obs": 45,
+   "confidence": 1.0,
+   "last_seen": 7.1
+  },
+  {
+   "id": 5,
+   "class": "shelf",
+   "centroid": [
+    5.697,
+    -5.496,
+    1.117
+   ],
+   "size": [
+    0.495,
+    0.586,
+    2.013
+   ],
+   "top_z": 2.123,
+   "surface": "horizontal",
+   "n_obs": 47,
+   "confidence": 1.0,
+   "last_seen": 7.2
+  },
+  {
+   "id": 6,
+   "class": "chair",
+   "centroid": [
+    4.891,
+    -7.007,
+    0.52
+   ],
+   "size": [
+    0.396,
+    0.502,
+    0.905
+   ],
+   "top_z": 0.973,
+   "surface": "horizontal",
+   "n_obs": 44,
+   "confidence": 1.0,
+   "last_seen": 7.8
+  },
+  {
+   "id": 7,
+   "class": "shelf",
+   "centroid": [
+    4.583,
+    -0.19,
+    1.088
+   ],
+   "size": [
+    0.949,
+    0.211,
+    1.906
+   ],
+   "top_z": 2.041,
+   "surface": "horizontal",
+   "n_obs": 24,
+   "confidence": 1.0,
+   "last_seen": 3.7
+  },
+  {
+   "id": 8,
+   "class": "lamp",
+   "centroid": [
+    4.602,
+    -0.165,
+    2.274
+   ],
+   "size": [
+    0.157,
+    0.215,
+    0.313
+   ],
+   "top_z": 2.431,
+   "surface": "horizontal",
+   "n_obs": 17,
+   "confidence": 0.997,
+   "last_seen": 3.5
+  },
+  {
+   "id": 9,
+   "class": "plant",
+   "centroid": [
+    5.492,
+    -0.541,
+    0.428
+   ],
+   "size": [
+    0.613,
+    0.564,
+    0.677
+   ],
+   "top_z": 0.766,
+   "surface": "horizontal",
+   "n_obs": 18,
+   "confidence": 0.998,
+   "last_seen": 3.9
+  },
+  {
+   "id": 10,
+   "class": "table",
+   "centroid": [
+    1.848,
+    -1.409,
+    0.472
+   ],
+   "size": [
+    0.826,
+    0.267,
+    0.111
+   ],
+   "top_z": 0.527,
+   "surface": "horizontal",
+   "n_obs": 7,
+   "confidence": 0.903,
+   "last_seen": 2.2
+  },
+  {
+   "id": 11,
+   "class": "sign",
+   "centroid": [
+    1.017,
+    0.796,
+    1.801
+   ],
+   "size": [
+    0.02,
+    0.344,
+    0.193
+   ],
+   "top_z": 1.898,
+   "surface": "vertical",
+   "n_obs": 13,
+   "confidence": 0.987,
+   "last_seen": 2.9
+  },
+  {
+   "id": 12,
+   "class": "stove",
+   "centroid": [
+    2.912,
+    -7.589,
+    0.465
+   ],
+   "size": [
+    0.483,
+    0.566,
+    0.789
+   ],
+   "top_z": 0.86,
+   "surface": "horizontal",
+   "n_obs": 40,
+   "confidence": 1.0,
+   "last_seen": 8.2
+  },
+  {
+   "id": 13,
+   "class": "sign",
+   "centroid": [
+    1.756,
+    -4.933,
+    1.9
+   ],
+   "size": [
+    0.293,
+    0.025,
+    0.143
+   ],
+   "top_z": 1.971,
+   "surface": "horizontal",
+   "n_obs": 11,
+   "confidence": 0.974,
+   "last_seen": 5.4
+  },
+  {
+   "id": 14,
+   "class": "counter",
+   "centroid": [
+    1.535,
+    -7.609,
+    0.566
+   ],
+   "size": [
+    1.937,
+    0.556,
+    0.822
+   ],
+   "top_z": 0.977,
+   "surface": "horizontal",
+   "n_obs": 18,
+   "confidence": 0.998,
+   "last_seen": 8.9
+  },
+  {
+   "id": 15,
+   "class": "sink",
+   "centroid": [
+    1.453,
+    -7.669,
+    1.02
+   ],
+   "size": [
+    0.472,
+    0.42,
+    0.218
+   ],
+   "top_z": 1.13,
+   "surface": "horizontal",
+   "n_obs": 9,
+   "confidence": 0.95,
+   "last_seen": 8.5
+  }
+ ]
+}

@@ -1,0 +1,309 @@
+{
+ "walk_id": "walk_06",
+ "objects": [
+  {
+   "id": 1,
+   "class": "sofa",
+   "centroid": [
+    0.599,
+    -2.154,
+    0.497
+   ],
+   "size": [
+    0.675,
+    1.674,
+    0.405
+   ],
+   "top_z": 0.699,
+   "surface": "horizontal",
+   "n_obs": 15,
+   "confidence": 0.993,
+   "last_seen": 4.1
+  },
+  {
+   "id": 2,
+   "class": "table",
+   "centroid": [
+    1.819,
+    -1.987,
+    0.465
+   ],
+   "size": [
+    0.868,
+    1.444,
+    0.124
+   ],
+   "top_z": 0.527,
+   "surface": "horizontal",
+   "n_obs": 18,
+   "confidence": 0.998,
+   "last_seen": 4.0
+  },
+  {
+   "id": 3,
+   "class": "table",
+   "centroid": [
+    4.875,
+    -6.387,
+    0.461
+   ],
+   "size": [
+    1.083,
+    0.681,
+    0.682
+   ],
+   "top_z": 0.802,
+   "surface": "horizontal",
+   "n_obs": 78,
+   "confidence": 1.0,
+   "last_seen": 11.9
+  },
+  {
+   "id": 4,
+   "class": "chair",
+   "centroid": [
+    4.888,
+    -5.691,
+    0.54
+   ],
+   "size": [
+    0.395,
+    0.523,
+    0.867
+   ],
+   "top_z": 0.974,
+   "surface": "horizontal",
+   "n_obs": 75,
+   "confidence": 1.0,
+   "last_seen": 11.8
+  },
+  {
+   "id": 5,
+   "class": "chair",
+   "centroid": [
+    4.886,
+    -7.012,
+    0.533
+   ],
+   "size": [
+    0.395,
+    0.51,
+    0.877
+   ],
+   "top_z": 0.971,
+   "surface": "horizontal",
+   "n_obs": 68,
+   "confidence": 1.0,
+   "last_seen": 11.9
+  },
+  {
+   "id": 6,
+   "class": "plant",
+   "centroid": [
+    1.825,
+    -1.995,
+    0.655
+   ],
+   "size": [
+    0.148,
+    0.148,
+    0.223
+   ],
+   "top_z": 0.766,
+   "surface": "horizontal",
+   "n_obs": 13,
+   "confidence": 0.987,
+   "last_seen": 3.8
+  },
+  {
+   "id": 7,
+   "class": "shelf",
+   "centroid": [
+    5.698,
+    -5.496,
+    1.121
+   ],
+   "size": [
+    0.497,
+    0.589,
+    2.003
+   ],
+   "top_z": 2.122,
+   "surface": "horizontal",
+   "n_obs": 74,
+   "confidence": 1.0,
+   "last_seen": 11.8
+  },
+  {
+   "id": 8,
+   "class": "sign",
+   "centroid": [
+    1.756,
+    -4.932,
+    1.901
+   ],
+   "size": [
+    0.291,
+    0.024,
+    0.144
+   ],
+   "top_z": 1.973,
+   "surface": "horizontal",
+   "n_obs": 25,
+   "confidence": 1.0,
+   "last_seen": 4.8
+  },
+  {
+   "id": 10,
+   "class": "plant",
+   "centroid": [
+    5.675,
+    -3.187,
+    0.627
+   ],
+   "size": [
+    0.461,
+    0.434,
+    1.205
+   ],
+   "top_z": 1.23,
+   "surface": "horizontal",
+   "n_obs": 36,
+   "confidence": 1.0,
+   "last_seen": 11.2
+  },
+  {
+   "id": 11,
+   "class": "tv",
+   "centroid": [
+    5.677,
+    -1.986,
+    0.245
+   ],
+   "size": [
+    0.347,
+    0.577,
+    0.43
+   ],
+   "top_z": 0.46,
+   "surface": "horizontal",
+   "n_obs": 27,
+   "confidence": 1.0,
+   "last_seen": 3.1
+  },
+  {
+   "id": 12,
+   "class": "plant",
+   "centroid": [
+    5.445,
+    -0.531,
+    0.431
+   ],
+   "size": [
+    0.517,
+    0.539,
+    0.706
+   ],
+   "top_z": 0.784,
+   "surface": "horizontal",
+   "n_obs": 24,
+   "confidence": 1.0,
+   "last_seen": 2.9
+  },
+  {
+   "id": 13,
+   "class": "shelf",
+   "centroid": [
+    4.571,
+    -0.175,
+    1.104
+   ],
+   "size": [
+    0.921,
+    0.238,
+    1.898
+   ],
+   "top_z": 2.053,
+   "surface": "horizontal",
+   "n_obs": 20,
+   "confidence": 0.999,
+   "last_seen": 2.6
+  },
+  {
+   "id": 14,
+   "class": "lamp",
+   "centroid": [
+    4.6,
+    -0.16,
+    2.308
+   ],
+   "size": [
+    0.163,
+    0.212,
+    0.247
+   ],
+   "top_z": 2.432,
+   "surface": "horizontal",
+   "n_obs": 10,
+   "confidence": 0.964,
+   "last_seen": 1.6
+  },
+  {
+   "id": 17,
+   "class": "stove",
+   "centroid": [
+    2.909,
+    -7.605,
+    0.449
+   ],
+   "size": [
+    0.486,
+    0.59,
+    0.821
+   ],
+   "top_z": 0.86,
+   "surface": "horizontal",
+   "n_obs": 43,
+   "confidence": 1.0,
+   "last_seen": 11.0
+  },
+  {
+   "id": 18,
+   "class": "counter",
+   "centroid": [
+    1.524,
+    -7.623,
+    0.587
+   ],
+   "size": [
+    1.956,
+    0.583,
+    0.959
+   ],
+   "top_z": 1.066,
+   "surface": "horizontal",
+   "n_obs": 47,
+   "confidence": 1.0,
+   "last_seen": 10.5
+  },
+  {
+   "id": 19,
+   "class": "sink",
+   "centroid": [
+    1.449,
+    -7.668,
+    1.021
+   ],
+   "size": [
+    0.473,
+    0.415,
+    0.22
+   ],
+   "top_z": 1.131,
+   "surface": "horizontal",
+   "n_obs": 35,
+   "confidence": 1.0,
+   "last_seen": 10.3
+  }
+ ]
+}

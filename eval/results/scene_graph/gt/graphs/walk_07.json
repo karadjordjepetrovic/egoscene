@@ -1,0 +1,309 @@
+{
+ "walk_id": "walk_07",
+ "objects": [
+  {
+   "id": 1,
+   "class": "table",
+   "centroid": [
+    1.842,
+    -1.986,
+    0.387
+   ],
+   "size": [
+    0.862,
+    1.443,
+    0.28
+   ],
+   "top_z": 0.528,
+   "surface": "horizontal",
+   "n_obs": 38,
+   "confidence": 1.0,
+   "last_seen": 10.6
+  },
+  {
+   "id": 2,
+   "class": "shelf",
+   "centroid": [
+    4.588,
+    -0.186,
+    1.247
+   ],
+   "size": [
+    0.955,
+    0.217,
+    1.6
+   ],
+   "top_z": 2.047,
+   "surface": "horizontal",
+   "n_obs": 55,
+   "confidence": 1.0,
+   "last_seen": 8.8
+  },
+  {
+   "id": 3,
+   "class": "tv",
+   "centroid": [
+    5.676,
+    -1.993,
+    0.249
+   ],
+   "size": [
+    0.344,
+    0.592,
+    0.42
+   ],
+   "top_z": 0.46,
+   "surface": "horizontal",
+   "n_obs": 54,
+   "confidence": 1.0,
+   "last_seen": 7.0
+  },
+  {
+   "id": 4,
+   "class": "lamp",
+   "centroid": [
+    4.6,
+    -0.162,
+    2.279
+   ],
+   "size": [
+    0.168,
+    0.205,
+    0.296
+   ],
+   "top_z": 2.427,
+   "surface": "horizontal",
+   "n_obs": 10,
+   "confidence": 0.964,
+   "last_seen": 7.9
+  },
+  {
+   "id": 5,
+   "class": "plant",
+   "centroid": [
+    5.67,
+    -3.17,
+    0.64
+   ],
+   "size": [
+    0.485,
+    0.426,
+    1.203
+   ],
+   "top_z": 1.242,
+   "surface": "horizontal",
+   "n_obs": 55,
+   "confidence": 1.0,
+   "last_seen": 6.9
+  },
+  {
+   "id": 6,
+   "class": "plant",
+   "centroid": [
+    5.486,
+    -0.541,
+    0.445
+   ],
+   "size": [
+    0.602,
+    0.547,
+    0.672
+   ],
+   "top_z": 0.781,
+   "surface": "horizontal",
+   "n_obs": 60,
+   "confidence": 1.0,
+   "last_seen": 8.2
+  },
+  {
+   "id": 7,
+   "class": "table",
+   "centroid": [
+    4.863,
+    -6.377,
+    0.425
+   ],
+   "size": [
+    1.055,
+    0.667,
+    0.758
+   ],
+   "top_z": 0.804,
+   "surface": "horizontal",
+   "n_obs": 25,
+   "confidence": 1.0,
+   "last_seen": 5.2
+  },
+  {
+   "id": 8,
+   "class": "chair",
+   "centroid": [
+    4.888,
+    -5.688,
+    0.512
+   ],
+   "size": [
+    0.392,
+    0.518,
+    0.91
+   ],
+   "top_z": 0.967,
+   "surface": "horizontal",
+   "n_obs": 26,
+   "confidence": 1.0,
+   "last_seen": 5.3
+  },
+  {
+   "id": 9,
+   "class": "chair",
+   "centroid": [
+    4.893,
+    -6.999,
+    0.508
+   ],
+   "size": [
+    0.394,
+    0.492,
+    0.922
+   ],
+   "top_z": 0.97,
+   "surface": "horizontal",
+   "n_obs": 21,
+   "confidence": 0.999,
+   "last_seen": 5.1
+  },
+  {
+   "id": 10,
+   "class": "plant",
+   "centroid": [
+    1.832,
+    -1.998,
+    0.657
+   ],
+   "size": [
+    0.138,
+    0.15,
+    0.219
+   ],
+   "top_z": 0.766,
+   "surface": "horizontal",
+   "n_obs": 23,
+   "confidence": 1.0,
+   "last_seen": 10.0
+  },
+  {
+   "id": 11,
+   "class": "shelf",
+   "centroid": [
+    5.699,
+    -5.491,
+    1.11
+   ],
+   "size": [
+    0.497,
+    0.579,
+    2.03
+   ],
+   "top_z": 2.125,
+   "surface": "horizontal",
+   "n_obs": 31,
+   "confidence": 1.0,
+   "last_seen": 5.5
+  },
+  {
+   "id": 12,
+   "class": "sign",
+   "centroid": [
+    1.757,
+    -4.933,
+    1.902
+   ],
+   "size": [
+    0.29,
+    0.024,
+    0.146
+   ],
+   "top_z": 1.975,
+   "surface": "horizontal",
+   "n_obs": 23,
+   "confidence": 1.0,
+   "last_seen": 9.5
+  },
+  {
+   "id": 13,
+   "class": "sofa",
+   "centroid": [
+    0.599,
+    -2.154,
+    0.509
+   ],
+   "size": [
+    0.666,
+    1.574,
+    0.379
+   ],
+   "top_z": 0.698,
+   "surface": "horizontal",
+   "n_obs": 56,
+   "confidence": 1.0,
+   "last_seen": 13.0
+  },
+  {
+   "id": 17,
+   "class": "sign",
+   "centroid": [
+    0.074,
+    -1.001,
+    1.702
+   ],
+   "size": [
+    0.012,
+    0.299,
+    0.115
+   ],
+   "top_z": 1.759,
+   "surface": "horizontal",
+   "n_obs": 43,
+   "confidence": 1.0,
+   "last_seen": 13.0
+  },
+  {
+   "id": 18,
+   "class": "stove",
+   "centroid": [
+    3.061,
+    -7.612,
+    0.443
+   ],
+   "size": [
+    0.182,
+    0.592,
+    0.835
+   ],
+   "top_z": 0.861,
+   "surface": "horizontal",
+   "n_obs": 3,
+   "confidence": 0.632,
+   "last_seen": 9.2
+  },
+  {
+   "id": 19,
+   "class": "sign",
+   "centroid": [
+    1.017,
+    0.782,
+    1.801
+   ],
+   "size": [
+    0.025,
+    0.316,
+    0.195
+   ],
+   "top_z": 1.898,
+   "surface": "vertical",
+   "n_obs": 10,
+   "confidence": 0.964,
+   "last_seen": 11.9
+  }
+ ]
+}
