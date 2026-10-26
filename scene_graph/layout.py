@@ -118,3 +118,28 @@ def support_relations(objects, floor, tol=0.08, floor_tol=0.2):
         else:
             rel[o.id] = "free"
     return rel
+
+
+def plane_to_z0(n, point):
+    """4x4 transform rotating unit normal n to +Z and moving the plane through `point` to z = 0."""
+    n = np.asarray(n, float) / np.linalg.norm(n)
+    z = np.array([0, 0, 1.0])
+    v = np.cross(n, z); s = np.linalg.norm(v); c = float(n @ z)
+    if s < 1e-8:
+        R = np.eye(3) if c > 0 else np.diag([1, -1, -1.0])
+    else:
+        vx = np.array([[0, -v[2], v[1]], [v[2], 0, -v[0]], [-v[1], v[0], 0]])
+        R = np.eye(3) + vx + vx @ vx * ((1 - c) / s ** 2)
+    T = np.eye(4); T[:3, :3] = R
+    T[2, 3] = -float((R @ np.asarray(point, float))[2])
+    return T
+
+
+def yaw_to_wall(walls):
+    """4x4 rotation about Z that makes the longest wall run along the X axis (tidier axis-aligned boxes)."""
+    if not walls:
+        return np.eye(4)
+    w = max(walls, key=lambda w: w["length"])
+    d = np.array(w["p1"]) - np.array(w["p0"]); a = -np.arctan2(d[1], d[0])
+    T = np.eye(4); T[:2, :2] = [[np.cos(a), -np.sin(a)], [np.sin(a), np.cos(a)]]
+    return T
