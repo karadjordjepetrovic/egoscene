@@ -1,14 +1,14 @@
 # EgoScene
 
-Ego-centric synthetic data and scene understanding for XR glasses (work in progress).
+Ego-centric synthetic data and scene understanding for XR glasses. **Status:** phases 1–4 complete (dataset, benchmarks, 3D scene graph); phase 5 (Gemma + panel placement) planned, see [Limitations and future work](#limitations-and-future-work).
 
 A game engine as a ground-truth generator: UE5 renders first-person walks with perfect depth, segmentation and camera poses, which are then used to benchmark vision foundation models and build lightweight 3D scene representations.
 
-## Key findings so far
+## Key findings
 
 Synthetic first-person walks with perfect ground truth, used to score off-the-shelf vision models the way XR glasses would use them:
 
-1. **Metric depth is ~33 % off on a wide-angle glasses camera, and the error follows the lens.** DA V2 Metric Indoor behaves as if every image had a ~74° lens (scale error = `tan(37°)/tan(FOV/2)`, confirmed at 60°, 74° and 90°). Correcting from the camera intrinsics alone takes δ1 from 21 % to 86 %. On a phone (~72° lens) the same model needs almost no correction.
+1. **Metric depth is ~33 % off on a wide-angle glasses camera, and the error follows the lens.** DA V2 Metric Indoor behaves as if every image had a ~74° lens (scale error = `tan(37°)/tan(FOV/2)`, confirmed at 60°, 74° and 90°). Correcting from the camera intrinsics alone takes δ1 from 21 % to 86 %. On real phone video, structure-from-motion measured the lens (59° in video mode) so the same correction can be applied without knowing the camera in advance.
 2. **Under 1 m is the blind spot across tasks.** Depth error, detection recall (53 % vs 84 % at 2–4 m) and text reading all get worse up close, exactly where you interact with things.
 3. **Small things are invisible at 720p.** Detection recall is 10 % for objects under 32×32 px; signs under 20 px tall are read correctly 2.5 % of the time.
 4. **Open-vocabulary detection beats closed-set segmentation for the objects XR triggers need.** Sofa: 93.7 AP with OWLv2 vs 12 IoU with SegFormer (it calls it "armchair").
@@ -21,7 +21,7 @@ Synthetic first-person walks with perfect ground truth, used to score off-the-sh
 - [x] **Phase 2:** dataset v1: 10 walks, 3,644 frames, 17 classes, 4 lighting presets. See the [dataset card](dataset/DATASET_CARD.md).
 - [x] **Phase 3:** benchmark depth, segmentation, detection and text models against ground truth, plus a real-video check.
 - [x] **Phase 4:** object-centric 3D scene graph, room layout and support relations at ~9 Hz, plus a real home video via COLMAP.
-- [ ] **Phase 5:** Gemma interface, contextual triggers and XR panel placement.
+- [ ] **Phase 5 (planned):** Gemma reads the scene graph, contextual triggers and XR panel placement.
 
 ## Results: depth (Phase 3)
 
@@ -88,7 +88,7 @@ Same 370 frames (every 10th; every 5th for text), RTX 3070, FP16, unoptimized Hu
 
 The same models on a 73 s first-person phone video of a real home (Samsung S25 main camera, portrait; one frame every 2 s). No ground truth, so this is qualitative, but it checks that the synthetic findings aren't artifacts:
 
-- **Depth scale transfers as predicted.** The phone's lens (~72° along the long side) is close to the ~74° the metric model assumes, so the FOV correction is only ×1.04 and raw metric depth looks right (room depths 1.4–6.4 m, median 2.8 m). On the 90° glasses camera the same model needs ×0.75.
+- **Depth scale: the lens matters on real footage too.** For this check I assumed the phone's spec FOV (~72°, factor ×1.04). Structure-from-motion later measured the actual video-mode FOV as 59° (stabilisation crops the sensor), i.e. a factor of ×1.33, and the camera-height check in Phase 4 showed the near-range bias on top of it. Absolute scale on real footage needs the lens calibration *and* a known camera height; see [Real home video](#real-home-video).
 - **Real windows are recognised as windows/outdoor**, unlike the synthetic HDRI view, confirming that failure is a dataset artifact.
 - **OWLv2 transfers well** (chairs, armchair, dressers as shelves). **EasyOCR hallucinates** text on a patterned rug: on real footage false positives matter too.
 - Same speed as on synthetic frames: depth 19 ms, SegFormer 26 ms, OWLv2 54 ms, EasyOCR 96 ms at 720×1280.
@@ -160,18 +160,79 @@ The same pipeline on the 73 s phone walk-through, with camera poses from COLMAP 
 
 | Path | What it is |
 |---|---|
-| `ue5/` | Unreal Editor Python scripts: labelling, walk generation |
-| `dataset/` | Converter, loader (`egoscene.py`), re-projection check, demo notebook, dataset card |
+| `ue5/` | Unreal Editor Python scripts: labelling, walk generation, baked lighting maps, render queue, real-scene import |
+| `dataset/` | Converter (`convert_all.py`), loader (`egoscene.py`), re-projection check, demo notebook, [dataset card](dataset/DATASET_CARD.md) |
 | `dataset/labels/` | Class and instance label maps |
 | `eval/` | Benchmarks: `depth_benchmark.py`, `seg_benchmark.py`, `det_benchmark.py`, `text_benchmark.py`, `real_video.py`; results in `eval/results/` |
-| `scene_graph/` | Scene graph (`graph.py`), layout (`layout.py`), evaluation (`eval_graph.py`, `eval_layout.py`), rendering, real-video pipeline (`real_scene_graph.py`, `sfm.py`) |
-| `placement/`, `report/` | Later phases |
+| `scene_graph/` | Scene graph (`graph.py`), layout (`layout.py`), evaluation (`eval_graph.py`, `eval_layout.py`), rendering (`render_graph.py`), real-video pipeline (`real_scene_graph.py`, `sfm.py`) |
+| `placement/`, `report/` | Reserved for phase 5 and the technical report |
 
-## Quick start
+## Reproducing
+
+**Environment:** Python 3.12+, an NVIDIA GPU (results above: RTX 3070 8 GB, driver 576+).
 
 ```bash
 pip install numpy opencv-python OpenEXR matplotlib jupyter
-python dataset/convert_all.py                       # UE renders -> data/
-python dataset/reproject_check.py data/apartment_01/walk_04 100 105
-jupyter notebook dataset/demo.ipynb
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cu128
+pip install transformers easyocr pycolmap imageio-ffmpeg
 ```
+
+**1. Render the dataset (Unreal Engine 5.8, Output Log in Cmd mode)**, from the UE project with these scripts in `Scripts/`:
+
+```
+py ".../label_objects.py"            # stencil IDs + labels JSON
+py ".../make_lighting_maps.py"       # day / overcast / evening / night copies of the level
+py ".../make_all_walks.py"           # 10 walk sequences + manifest
+py ".../make_render_queue.py"        # Movie Render Queue job per walk -> Render (Local)
+```
+
+**2. Convert and check**
+
+```bash
+python dataset/convert_all.py
+python dataset/reproject_check.py data/apartment_01/walk_04 100 105      # expect < 0.1 % median error
+```
+
+**3. Benchmarks (phase 3)**
+
+```bash
+python eval/depth_benchmark.py --model da2-small --fp16
+python eval/depth_benchmark.py --model da2-metric-indoor-small --fp16 [--crop-fov 74]
+python eval/seg_benchmark.py --model segformer-b2-ade --fp16
+python eval/seg_benchmark.py --model clipseg --fp16
+python eval/det_benchmark.py --model owlv2-base --fp16
+python eval/text_benchmark.py --model easyocr
+python eval/real_video.py <video.mp4> --long-side-fov <deg> --fp16
+```
+
+**4. Scene graph (phase 4)**
+
+```bash
+python scene_graph/eval_graph.py --input gt              # pipeline check
+python scene_graph/eval_graph.py --input gtbox
+python scene_graph/eval_graph.py --input model --fp16    # all model variants + comparison.md
+python scene_graph/eval_layout.py --input model --fp16
+python scene_graph/render_graph.py walk_04               # video + map
+python scene_graph/real_scene_graph.py <video.mp4> --long-side-fov <deg> --fp16 --camera-height 1.5
+```
+
+Every script has a debug mode that needs no GPU (`--model gt-noise`, `gt-jitter`, `gt-oracle`, `--input gt`), used to check the metric code against known answers.
+
+## Limitations and future work
+
+**Dataset (v1).** One environment; counter and sink are blockouts; door and window have no labelled pixels; evening interiors are overexposed; no people, sensor noise or motion blur. v2: more environments (office, street), real assets for the kitchen, a noise/blur/rolling-shutter variant, people.
+
+**Perception → 3D.**
+- Boxes lose most of an object's 3D extent (IoU 0.98 → 0.54): add a promptable segmenter (box → mask) and measure its cost per frame.
+- Monocular depth errors are distance-dependent, so a global per-frame scale fix fails: try scale-and-shift alignment, fusion with SLAM points, or eye-height anchoring per frame.
+- Real-time budget: run the optimized depth path and the detector at a lower rate than depth + graph.
+
+**Real video.** Offline tracking is the weak link (plain walls, repeated doors). Next steps: a better capture (landscape, slow, a closing loop), a learned reconstruction model (VGGT, MASt3R-SLAM), or the phone's own ARCore poses, which is what glasses provide natively.
+
+**Phase 5 (planned).** Serialize the scene graph to compact JSON and let a small Gemma model decide *when* to show something (contextual triggers, e.g. "standing at the stove → recipe") and *where* a panel goes ("pin the timer next to the stove"), with placement rules from UI practice (1–2 m away, on or near a surface, facing the user, not covering people or key objects). Evaluate on 30–50 scripted requests against ground-truth and model-built graphs.
+
+**Also interesting:** 3D Gaussian splatting on EgoScene walks with exact poses and ground-truth depth, to measure reconstruction geometry rather than only image quality.
+
+## Credits
+
+Assets: [Poly Haven](https://polyhaven.com) (CC0 models, textures and HDRIs). Models: Depth Anything V2, SegFormer, CLIPSeg, OWLv2, EasyOCR; reconstruction with COLMAP. Rendered with Unreal Engine 5. Dataset licence and details in the [dataset card](dataset/DATASET_CARD.md).
