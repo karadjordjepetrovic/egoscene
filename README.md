@@ -13,13 +13,14 @@ Synthetic first-person walks with perfect ground truth, used to score off-the-sh
 3. **Small things are invisible at 720p.** Detection recall is 10 % for objects under 32×32 px; signs under 20 px tall are read correctly 2.5 % of the time.
 4. **Open-vocabulary detection beats closed-set segmentation for the objects XR triggers need.** Sofa: 93.7 AP with OWLv2 vs 12 IoU with SegFormer (it calls it "armchair").
 5. **Lighting hurts reading most.** Day → night barely moves depth or detection, but exact text reads drop from 48 % to 28 %.
+6. **A persistent 3D map needs temporally consistent depth more than accurate depth.** In the scene graph, model depth costs more than the detector (recall 61 % vs 72 %), because its scale jumps between frames and objects fragment into duplicates. Knowing the wearer's eye height pins the scale.
 
 ## Status
 
 - [x] **Phase 1:** UE5 capture rig: glasses camera, natural head motion, GT passes, coordinate conversion. Re-projection check: 0.02 % median depth error.
 - [x] **Phase 2:** dataset v1: 10 walks, 3,644 frames, 17 classes, 4 lighting presets. See the [dataset card](dataset/DATASET_CARD.md).
 - [x] **Phase 3:** benchmark depth, segmentation, detection and text models against ground truth, plus a real-video check.
-- [ ] **Phase 4:** object-centric 3D scene graph in a real-time budget.
+- [x] **Phase 4:** object-centric 3D scene graph, room layout and support relations at ~9 Hz, plus a real home video via COLMAP.
 - [ ] **Phase 5:** Gemma interface, contextual triggers and XR panel placement.
 
 ## Results: depth (Phase 3)
@@ -97,6 +98,64 @@ The same models on a 73 s first-person phone video of a real home (Samsung S25 m
 | ![](eval/results/real/frame_018_t036s.png) | ![](eval/results/real/frame_036_t072s.png) |
 | ![](eval/results/real/frame_013_t026s.png) | ![](eval/results/real/frame_015_t030s.png) |
 
+## Results: 3D scene graph (Phase 4)
+
+Per-frame perception turned into a small persistent map: the objects the glasses "know about", each with class, 3D box, top height, surface type (usable horizontal top or vertical face), what it rests on, and when it was last seen. Code in [`scene_graph/`](scene_graph/): lift each object's pixels to 3D with depth and pose, associate with existing objects (3D overlap, distance, or "partial view of a bigger object"), merge with an unbiased point reservoir, prune one-off fragments. Updated at 10 Hz along every walk; camera poses are ground truth in all variants below (no SLAM).
+
+![Scene graph building up along walk_04 (night): 3D boxes in the view, top-down map on the right](eval/results/scene_graph/render/walk_04_graph.gif)
+
+### Where the accuracy goes
+
+Each row swaps one ground-truth input for a model, so the losses can be attributed (all 10 walks, 158 ground-truth objects; match = same class and 3D IoU ≥ 0.25):
+
+| Objects from | Depth from | Recall | Precision | 3D IoU | Centroid error |
+|---|---|---|---|---|---|
+| ground-truth masks | ground truth | **100 %** | 99 % | 0.98 | 0.3 cm |
+| ground-truth boxes → depth masks | ground truth | 93 % | 80 % | 0.54 | 11 cm |
+| OWLv2 boxes → depth masks | ground truth | 72 % | 71 % | 0.54 | 13 cm |
+| ground-truth masks | DA V2 Metric (FOV-corrected) | 61 % | 51 % | 0.41 | 15 cm |
+| **OWLv2 boxes → depth masks** | **DA V2 Metric (FOV-corrected)** | **52 %** | **45 %** | **0.36** | **20 cm** |
+| … + temporal scale alignment | | 42 % | 34 % | 0.38 | 17 cm |
+
+**1. The graph logic is sound:** with perfect inputs it recovers every object to within 3 mm. Everything lost below that is perception, not bookkeeping.
+
+**2. Temporally consistent depth matters more than a good detector.** Perfect masks with model depth (61 %) do worse than a real detector with perfect depth (72 %), with 81 false positives. Monocular metric depth is fairly accurate on average (δ1 86 %), but its scale jumps from frame to frame (per-frame scale 0.63–0.81 at 90° FOV), so the same table lands 30–40 cm apart in consecutive frames and fragments into duplicates. A persistent map needs depth that's consistent over time more than depth that's accurate per frame.
+
+**3. Boxes aren't enough to lift objects to 3D.** Turning 2D boxes into masks with depth keeps recall (93 %) but halves the 3D IoU (0.98 → 0.54): the box includes the wall and floor behind thin objects. Chairs are the most-missed object. A promptable segmenter (box → mask) is the obvious next component, and a real-time trade-off to measure.
+
+**4. A global temporal scale alignment makes it worse.** Rescaling each depth map to agree with the previous one (using the known camera motion) fixed a synthetic per-frame scale jitter in simulation (recall 31 → 77 %), but on the real model it drops recall from 52 % to 42 %. The model's error isn't one scale per frame; it's distance-dependent (near surfaces overestimated, see Phase 3), so one correction per frame smears the near-range bias over the whole image.
+
+### Room layout
+
+Floor plane (RANSAC on floor pixels), main walls on the top-down map (2D RANSAC lines, split at doorways), and support relations ("sink on counter", "lamp on shelf", "sign on wall"):
+
+| Inputs | Floor height error | Floor tilt | Eye height (rig 1.60 m) | Walls found | Wall offset | Support relations agree |
+|---|---|---|---|---|---|---|
+| ground truth | 0.2 cm | 0.00° | 1.60 m | 100 % | 0.0 cm | – |
+| DA V2 Metric + SegFormer | 11.8 cm | 1.55° | 1.59 m (**1.32–1.80** per walk) | 87 % | 7.7 cm | 75 % |
+
+**5. Your own eye height is a free metric-scale calibration.** Walls come out well (7.7 cm), but the floor height swings by ±25 cm between walks: the per-walk scale error of monocular depth, made visible as "how tall am I". Glasses know the wearer's eye height above the floor (and gravity from the IMU), so rescaling depth until the camera sits at that height pins the metric scale with information the device already has. On the real video below, this is exactly what was needed.
+
+### Timing (RTX 3070, FP16, 1280×720, unoptimized Hugging Face forward passes)
+
+| Stage | ms / frame |
+|---|---|
+| DA V2 Metric Indoor Small (depth) | 19 |
+| OWLv2-base, 11 text queries (objects) | 59 |
+| SegFormer-B2 (floor / walls, layout only) | 26 |
+| Scene-graph update (CPU, numpy) | 5.2 (p95 10.9) |
+| **Total** | **~110 ms → ~9 Hz** |
+
+The graph itself is cheap; the open-vocabulary detector dominates. A practical split for glasses: depth and the graph every frame, the detector at a few Hz (objects don't move often), and the optimized depth path ([6.86 ms at 518²](https://github.com/karadjordjepetrovic/realtime-depth-optimization)) instead of the stock forward pass.
+
+### Real home video
+
+The same pipeline on the 73 s phone walk-through, with camera poses from COLMAP (structure-from-motion) instead of ground truth ([`scene_graph/real_scene_graph.py`](scene_graph/real_scene_graph.py)); the output is a scene-graph video, a top-down map, a coloured point cloud and an Unreal import script ([`ue5/import_real_scene.py`](ue5/import_real_scene.py)). Not published, as it's a private home, but three results matter:
+
+- **Structure-from-motion calibrates the lens for free.** COLMAP refined the focal length to a 59° field of view (I had assumed 72° from the phone's spec; video stabilisation crops the sensor), which changes the metric-depth correction from ×1.04 to ×1.33.
+- **The near-range depth bias shows up on real footage too:** scaled by the depth model, the camera came out 2.2 m above the floor for a phone held at ~1.5 m; the eye-height calibration (finding 5) fixed it.
+- **Offline tracking is the weak link, not perception.** Plain white walls and a hallway of identical doors split the reconstruction into chunks and mis-placed ~20 % of frames (filtered by a camera-height / walking-speed sanity check), which leaves ghosted walls and duplicate objects. Real glasses track their 6DoF pose natively; a learned SLAM (VGGT, MASt3R-SLAM) or the phone's own ARCore poses would replace this step.
+
 ## Repository
 
 | Path | What it is |
@@ -105,7 +164,8 @@ The same models on a 73 s first-person phone video of a real home (Samsung S25 m
 | `dataset/` | Converter, loader (`egoscene.py`), re-projection check, demo notebook, dataset card |
 | `dataset/labels/` | Class and instance label maps |
 | `eval/` | Benchmarks: `depth_benchmark.py`, `seg_benchmark.py`, `det_benchmark.py`, `text_benchmark.py`, `real_video.py`; results in `eval/results/` |
-| `scene_graph/`, `placement/`, `report/` | Later phases |
+| `scene_graph/` | Scene graph (`graph.py`), layout (`layout.py`), evaluation (`eval_graph.py`, `eval_layout.py`), rendering, real-video pipeline (`real_scene_graph.py`, `sfm.py`) |
+| `placement/`, `report/` | Later phases |
 
 ## Quick start
 

@@ -22,6 +22,7 @@ BASE_MAT = "/Engine/BasicShapes/BasicShapeMaterial.BasicShapeMaterial"
 MAT_DIR = "/Game/EgoScene/Real/Materials"
 MAP_DIR = "/Game/EgoScene/Real/Maps"
 EDGE = 2.0          # cm, wireframe edge thickness
+DEFAULT_JSON = "C:/dev/egoscene/data/real/_out/home_walk_01/scene_graph/home_walk_01_graph.json"
 
 eas = unreal.get_editor_subsystem(unreal.EditorActorSubsystem)
 les = unreal.get_editor_subsystem(unreal.LevelEditorSubsystem)
@@ -118,7 +119,9 @@ def main(json_path):
         n += 1
 
     wall_mat = material("Wall", (0.75, 0.75, 0.78))
-    for i, w in enumerate(g.get("walls", [])):
+    # only the main walls (>= 1 m, best supported); short fragments are mostly noise from furniture/pose errors
+    main_walls = sorted([w for w in g.get("walls", []) if w["length"] >= 1.0], key=lambda w: -w["points"])[:10]
+    for i, w in enumerate(main_walls):
         p0, p1 = ue(w["p0"] + [0]), ue(w["p1"] + [0])
         dx, dy = p1.x - p0.x, p1.y - p0.y
         length = (dx * dx + dy * dy) ** 0.5
@@ -126,6 +129,7 @@ def main(json_path):
                        wall_mat, f"wall_{i}", "SceneGraph/Walls")
         a.set_actor_rotation(unreal.Rotator(0, 0, math.degrees(math.atan2(dy, dx))), False)
         a.set_is_temporarily_hidden_in_editor(True)        # toggle with the eye icon on the Walls folder
+        a.set_actor_hidden_in_game(True)
 
     path_mat = material("CameraPath", (0.9, 0.1, 0.1))
     for i, p in enumerate(g.get("camera_path", [])[::3]):
@@ -133,11 +137,12 @@ def main(json_path):
     floor_mat = material("Floor", (0.35, 0.35, 0.35))
     mesh_actor(PLANE, unreal.Vector(0, 0, -1), unreal.Vector(40, 40, 1), floor_mat, "floor_z0", "SceneGraph/Floor")
     les.save_current_level()
-    unreal.log(f"Real scene: {n} objects, {len(g.get('walls', []))} walls, camera height {g['camera_height_m']:.2f} m -> {map_path}")
+    unreal.log(f"Real scene: {n} objects, {len(main_walls)} walls, camera height {g['camera_height_m']:.2f} m -> {map_path}")
 
 
 if __name__ == "__main__":
     args = sys.argv[1:] if sys.argv and sys.argv[0].lower().endswith(".py") else sys.argv
-    if not args:
-        raise SystemExit('Usage: py ".../import_real_scene.py" "<path to *_graph.json>"')
-    main(args[0])
+    path = args[0] if args else DEFAULT_JSON
+    if not os.path.exists(path):
+        raise SystemExit(f'Scene graph JSON not found: {path}\nUsage: py ".../import_real_scene.py" "<path to *_graph.json>"')
+    main(path)
